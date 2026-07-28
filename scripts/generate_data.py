@@ -107,12 +107,37 @@ rumors 没有则输出空数组。所有事实必须有公开信源支撑，禁�
 # ------------------------------------------------------------- 检索接口 ---
 def search_news():
     """
-    TODO（可选）：接入你自己的新闻检索 API，返回检索结果文本，
-    作为上下文拼入 user prompt，提高时效性与可追溯性。
-    示例：调用 Serper / Tavily / 自建爬虫，返回 [{title, snippet, url, date}, ...]
-    未配置时返回 None，完全依赖模型自身能力。
+    通过 Google News RSS 检索五大赛道近24小时新闻（无需 API 密钥，
+    GitHub Actions 境外节点可直接访问），作为上下文喂给大模型，
+    保证事件有真实信源、可追溯。全部检索失败时返回 None 降级。
+    如需更高质量线索，可替换为 Serper / Tavily / 自建爬虫。
     """
-    return None
+    import xml.etree.ElementTree as ET
+    from urllib.parse import quote
+
+    blocks = []
+    for track in TRACKS:
+        q = quote(f"{track} when:1d")
+        rss_url = f"https://news.google.com/rss/search?q={q}&hl=zh-CN&gl=CN&ceid=CN:zh"
+        try:
+            resp = requests.get(rss_url, timeout=30,
+                                headers={"User-Agent": "Mozilla/5.0 (compatible; news-bot)"})
+            resp.raise_for_status()
+            root = ET.fromstring(resp.content)
+            lines = []
+            for it in root.findall(".//item")[:10]:
+                title = (it.findtext("title") or "").strip()
+                link = (it.findtext("link") or "").strip()
+                pub = (it.findtext("pubDate") or "").strip()
+                src_el = it.find("source")
+                src = src_el.text.strip() if src_el is not None and src_el.text else "未知来源"
+                lines.append(f"- [{pub}] {title}（{src}）{link}")
+            if lines:
+                blocks.append(f"## {track}\n" + "\n".join(lines))
+                print(f"[generate_data] 检索 {track}: {len(lines)} 条线索")
+        except Exception as e:
+            print(f"[generate_data] 检索 {track} 失败：{e}")
+    return "\n\n".join(blocks) if blocks else None
 
 
 # ------------------------------------------------------------ API 调用 ----
@@ -149,7 +174,8 @@ def call_llm(prompt: str) -> str:
 
 
 def extract_json(text: str) -> dict:
-    """容错解析：剥离可能的 markdown 代码块包裹后再 json.loads。"""
+    """容错解析：先剥离可能的 markdown 代码块包裹；若整体解析失败，
+    退而截取首个 { 到末个 } 之间的内容再解析（容忍模型输出的前后废话）。"""
     cleaned = text.strip()
     if cleaned.startswith("```"):
         lines = cleaned.splitlines()
@@ -159,7 +185,13 @@ def extract_json(text: str) -> dict:
         if lines and lines[-1].strip() == "```":
             lines = lines[:-1]
         cleaned = "\n".join(lines).strip()
-    return json.loads(cleaned)
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        start, end = cleaned.find("{"), cleaned.rfind("}")
+        if start != -1 and end > start:
+            return json.loads(cleaned[start:end + 1])
+        raise
 
 
 # ------------------------------------------------------------ 数据校验 ----
@@ -240,7 +272,10 @@ def main() -> int:
         now_iso=NOW.isoformat(),
     )
     if news_context:
-        prompt += "\n\n以下为实时检索到的新闻线索（优先据此整理，并保留原始链接）：\n" + news_context
+        prompt += ("\n\n以下为实时检索到的过去24小时新闻线索。"
+                   "请只根据这些线索整理事件，禁止编造线索之外的事件、公司与链接；"
+                   "sources 的 name/time/url 直接取自线索中的来源、发布时间与链接：\n"
+                   + news_context)
 
     # 1) 调用大模型
     print("[generate_data] 调用大模型 API ...")
