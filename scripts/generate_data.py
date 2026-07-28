@@ -136,6 +136,11 @@ def call_llm(prompt: str) -> str:
         "response_format": {"type": "json_object"},  # 如所用模型不支持，删除此行
     }
     resp = requests.post(url, headers=headers, json=payload, timeout=REQUEST_TIMEOUT)
+    if resp.status_code == 400 and "response_format" in payload:
+        # 部分接口/模型不支持 JSON mode（response_format），去掉后重试一次
+        print("[generate_data] 接口不支持 response_format，降级为普通模式重试")
+        payload.pop("response_format")
+        resp = requests.post(url, headers=headers, json=payload, timeout=REQUEST_TIMEOUT)
     resp.raise_for_status()
     body = resp.json()
     return body["choices"][0]["message"]["content"]
