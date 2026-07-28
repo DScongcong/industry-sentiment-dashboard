@@ -132,7 +132,7 @@ def call_llm(prompt: str) -> str:
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": prompt},
         ],
-        "temperature": 0.2,
+        "temperature": 1,  # kimi-for-coding 模型仅允许 temperature=1；换其他模型可调低（如 0.2）
         "response_format": {"type": "json_object"},  # 如所用模型不支持，删除此行
     }
     resp = requests.post(url, headers=headers, json=payload, timeout=REQUEST_TIMEOUT)
