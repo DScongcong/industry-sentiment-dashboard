@@ -35,6 +35,10 @@ import requests
 BASE_URL = (os.environ.get("LLM_BASE_URL") or "https://api.moonshot.cn/v1").rstrip("/")
 MODEL = os.environ.get("LLM_MODEL") or "kimi-k2-0905-preview"
 API_KEY = os.environ.get("LLM_API_KEY", "").strip()  # strip: 防止粘贴密钥时带入首尾空格/换行
+# 采样温度：kimi-for-coding 仅允许 1；DeepSeek 等建议 0.2（结构化输出更稳定）
+TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE") or "1")
+# 每个赛道最多保留的事件条数（控制输出规模，避免生成超时）
+MAX_EVENTS_PER_TRACK = int(os.environ.get("MAX_EVENTS_PER_TRACK") or "3")
 
 CST = timezone(timedelta(hours=8))                      # 中国标准时间 UTC+8
 NOW = datetime.now(CST)
@@ -100,7 +104,7 @@ USER_PROMPT_TEMPLATE = """当前中国标准时间：{now}。
   ]
 }}
 
-要求：events 覆盖全部5个赛道（某赛道确无新增可不出现），每个赛道最多3条、总计不超过15条；
+要求：events 覆盖全部5个赛道（某赛道确无新增可不出现），每个赛道最多{max_per_track}条、总计不超过{max_total}条；
 每条 events 的 sources 至少1个；
 rumors 没有则输出空数组。所有事实必须有公开信源支撑，禁止主观演绎。"""
 
@@ -159,7 +163,7 @@ def call_llm(prompt: str) -> str:
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": prompt},
         ],
-        "temperature": 1,  # kimi-for-coding 模型仅允许 temperature=1；换其他模型可调低（如 0.2）
+        "temperature": TEMPERATURE,  # 由环境变量 LLM_TEMPERATURE 控制，默认 1
         "response_format": {"type": "json_object"},  # 如所用模型不支持，脚本会自动去掉重试
         "stream": True,
     }
@@ -292,6 +296,8 @@ def main() -> int:
         now=NOW.strftime("%Y-%m-%d %H:%M"),
         now_short=NOW.strftime("%Y-%m-%d %H:%M"),
         now_iso=NOW.isoformat(),
+        max_per_track=MAX_EVENTS_PER_TRACK,
+        max_total=MAX_EVENTS_PER_TRACK * len(TRACKS),
     )
     if news_context:
         prompt += ("\n\n以下为实时检索到的过去24小时新闻线索。"
