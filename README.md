@@ -50,11 +50,21 @@ git push -u origin main
 
 仓库页 → **Settings → Secrets and variables → Actions**：
 
-| 类型 | 名称 | 说明 |
-|---|---|---|
-| Secret | `LLM_API_KEY` | 大模型 API 密钥（必填） |
+| 类型       | 名称             | 说明                                                         |
+| -------- | -------------- | ---------------------------------------------------------- |
+| Secret   | `LLM_API_KEY`  | 大模型 API 密钥（必填）                                             |
 | Variable | `LLM_BASE_URL` | API 基础地址，可选，默认 `https://api.moonshot.cn/v1`（OpenAI 兼容接口均可） |
-| Variable | `LLM_MODEL` | 模型名，可选，默认 `kimi-k2-0905-preview` |
+| Variable | `LLM_MODEL`    | 模型名，可选，默认 `kimi-k2-0905-preview`                           |
+
+常见服务商配置示例：
+
+| 服务商 | `LLM_BASE_URL` | `LLM_MODEL` |
+|---|---|---|
+| Moonshot 开放平台（按量付费） | `https://api.moonshot.cn/v1` | `kimi-k2-0905-preview` |
+| Kimi Coding Plan（会员编程套餐） | `https://api.kimi.com/coding/v1` | `kimi-for-coding`（该模型 temperature 仅允许 1，脚本已适配） |
+| DeepSeek | `https://api.deepseek.com/v1` | `deepseek-chat` |
+
+> 数据时效说明：脚本会先通过 Google News RSS 检索五大赛道近 24 小时新闻作为上下文，再由大模型整理标注，保证事件有真实可追溯的信源；如需更高质量线索，可在 `scripts/generate_data.py` 的 `search_news()` 中替换为 Serper / Tavily 等检索 API。
 
 无需配置 GitHub Token：工作流已声明 `permissions: contents: write`，使用内置 `GITHUB_TOKEN` 推送。
 
