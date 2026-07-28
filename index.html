@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="行业追踪与市场情绪研究看板：仅提供资讯证据，不构成投资建议" />
+<title>行业追踪与市场情绪研究看板</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --primary: #165DFF;
+    --positive: #00B42A;
+    --negative: #F53F3F;
+    --neutral: #86909C;
+    --rumor: #FF7D00;
+    --bg: #F7F8FA;
+  }
+  html { -webkit-font-smoothing: antialiased; }
+  body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg);
+    color: #1D2129;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease;
+  }
+  .card:hover { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10); }
+  .tag { border-radius: 4px; font-size: 12px; line-height: 20px; padding: 0 8px; display: inline-flex; align-items: center; white-space: nowrap; }
+  .pill {
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 4px 12px;
+    cursor: pointer;
+    user-select: none;
+    background: #F2F3F5;
+    color: #1D2129;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    white-space: nowrap;
+  }
+  .pill:hover { background: #E5E6EB; }
+  .pill:active { transform: scale(0.97); }
+  .pill.active { background: var(--primary); color: #FFFFFF; }
+  .pill.active:hover { background: #0E4FE0; }
+  /* 折叠区平滑过渡 */
+  .collapse-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.25s ease; }
+  .collapse-body.open { grid-template-rows: 1fr; }
+  .collapse-inner { overflow: hidden; min-height: 0; }
+  .collapse-arrow { transition: transform 0.25s ease; display: inline-block; }
+  .collapse-arrow.open { transform: rotate(90deg); }
+  .prose-max { max-width: 800px; }
+  .divider { border-color: #F0F0F0; }
+  ::selection { background: rgba(22, 93, 255, 0.15); }
+  .link { color: var(--primary); text-decoration: none; transition: color 0.2s ease; }
+  .link:hover { color: #0E4FE0; text-decoration: underline; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+  <!-- ===================== (1) 顶部状态栏 ===================== -->
+  <header class="pb-5 border-b divider">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+      <div>
+        <h1 class="text-[20px] font-semibold leading-7 text-[#1D2129]">行业追踪与市场情绪研究看板</h1>
+        <p class="text-[12px] text-[#86909C] mt-1">仅提供资讯证据，不构成投资建议</p>
+      </div>
+      <div class="flex flex-wrap items-stretch gap-x-6 gap-y-2" id="statBar">
+        <div class="flex flex-col">
+          <span class="text-[12px] text-[#86909C]">数据截止时间</span>
+          <span class="text-[14px] font-semibold text-[#1D2129]" id="statCutoff">--</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[12px] text-[#86909C]">时间窗口</span>
+          <span class="text-[14px] font-semibold text-[#1D2129]" id="statWindow">--</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[12px] text-[#86909C]">新增有效事件</span>
+          <span class="text-[14px] font-semibold text-[#165DFF]" id="statEvents">--</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-[12px] text-[#86909C]">待验证传闻</span>
+          <span class="text-[14px] font-semibold text-[#FF7D00]" id="statRumors">--</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== (2) 筛选控制区 ===================== -->
+  <section class="py-4 border-b divider" id="filterBar" aria-label="筛选控制区">
+    <div class="flex flex-wrap gap-x-8 gap-y-3" id="filterGroups"><!-- JS 渲染 --></div>
+  </section>
+
+  <!-- ===================== (3) 主内容双栏 ===================== -->
+  <main class="py-5">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-5 items-start">
+
+      <!-- 左栏：正式事件列表（75%） -->
+      <div class="lg:col-span-3 min-w-0">
+        <div id="loadingState" class="card p-10 text-center text-[#86909C] text-[14px]">
+          数据加载中…
+        </div>
+        <div id="errorState" class="card p-10 text-center hidden">
+          <p class="text-[14px] text-[#F53F3F] font-semibold">数据加载失败</p>
+          <p class="text-[12px] text-[#86909C] mt-2">请检查 data/events.json 是否存在且格式正确，或稍后刷新重试。</p>
+        </div>
+        <div id="emptyState" class="card p-10 text-center hidden">
+          <p class="text-[14px] text-[#1D2129] font-semibold">暂无符合条件的事件</p>
+          <p class="text-[12px] text-[#86909C] mt-2">请调整筛选条件后重试。</p>
+        </div>
+        <div id="eventList" class="space-y-6"></div>
+      </div>
+
+      <!-- 右栏：待验证热度观察区（25%） -->
+      <aside class="lg:col-span-1 min-w-0">
+        <div class="card p-4" style="background:#FAFBFC;">
+          <h2 class="text-[16px] font-semibold text-[#4E5969]">待验证热度观察</h2>
+          <p class="text-[12px] text-[#86909C] mt-1">无权威信源佐证，仅作热度线索</p>
+          <div id="rumorList" class="mt-3 space-y-3"></div>
+          <div id="rumorEmpty" class="hidden mt-3 text-[12px] text-[#86909C] py-6 text-center">本窗口内暂无待验证线索</div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ===================== (4) 底部备注区 ===================== -->
+  <footer class="pt-4 pb-8 border-t divider">
+    <p class="text-[12px] text-[#86909C] leading-6 prose-max">
+      1. 所有资讯均来自公开渠道，仅作客观整理，不构成任何投资建议。
+      2. 证据强度基于信源等级判定，不代表事件影响大小。
+      3. 社媒内容仅为热度线索，请勿作为决策依据。
+    </p>
+  </footer>
+</div>
+
+<script type="application/json" id="embeddedData">
+{
+  "meta": {
+    "dataCutoff": "2026-07-28 16:39（中国标准时间）",
+    "timeWindow": "过去24小时",
+    "generatedAt": "2026-07-28T16:39:00+08:00",
+    "note": "示例数据，正式环境由 scripts/generate_data.py 每日自动覆盖更新"
+  },
+  "events": [
+    {
+      "id": "evt-20260728-001",
+      "tracks": ["CPO"],
+      "targets": "中际旭创股份有限公司 中际旭创 300308.SZ / 3308.HK",
+      "eventTypes": ["公司公告"],
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "中性",
+      "impactHorizon": "短期",
+      "evidenceStrength": "强",
+      "coreFact": "中际旭创H股发售价定为每股980港元，较询价上限折价约3%；基础发行5450万股，基础募资约534亿港元，为年内港股最大IPO，预计7月30日主板挂牌。",
+      "marketInterpretation": "招股书显示约35%募资净额拟投入1.6T/3.2T光模块及NPO、CPO技术研发；基石投资者包括淡马锡、高瓴、贝莱德、阿里巴巴、腾讯等。",
+      "rumorNote": "",
+      "publishTime": "2026-07-28",
+      "sources": [
+        { "name": "财联社", "time": "2026-07-28", "url": "https://www.cls.cn/detail/2438394" },
+        { "name": "证券时报网", "time": "2026-07-28", "url": "https://wap.eastmoney.com/a/202607283822544194.html" }
+      ]
+    },
+    {
+      "id": "evt-20260728-002",
+      "tracks": ["半导体设备"],
+      "targets": "上海至纯洁净系统科技股份有限公司 至纯科技 603690.SH",
+      "eventTypes": ["公司公告"],
+      "sentimentFactor": "风险因子",
+      "impactDirection": "中性",
+      "impactHorizon": "短期",
+      "evidenceStrength": "强",
+      "coreFact": "至纯科技股票于7月24日、27日连续两个交易日收盘价涨幅偏离值累计超20%，构成异常波动。公司自查称内外部经营环境未发生重大变化，2025年及2026年上半年均亏损。",
+      "marketInterpretation": "",
+      "rumorNote": "",
+      "publishTime": "2026-07-27",
+      "sources": [
+        { "name": "公司公告（上交所披露）", "time": "2026-07-27", "url": "https://www.cfi.net.cn/p20260727000984.html" },
+        { "name": "东方财富网", "time": "2026-07-27", "url": "https://finance.eastmoney.com/a/202607273822192275.html" }
+      ]
+    },
+    {
+      "id": "evt-20260728-003",
+      "tracks": ["国产算力"],
+      "targets": "四川君逸数码科技股份有限公司 君逸数码 301172.SZ",
+      "eventTypes": ["公司公告", "供应链变动"],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "中期",
+      "evidenceStrength": "强",
+      "coreFact": "君逸数码公告拟向多家供应商采购高性能算力服务器等硬件设备，采购合同总金额预计不超3.1亿元，主要用于为客户提供云算力服务，不构成重大资产重组。",
+      "marketInterpretation": "",
+      "rumorNote": "",
+      "publishTime": "2026-07-27",
+      "sources": [
+        { "name": "财联社", "time": "2026-07-27", "url": "https://www.cls.cn/detail/2438068" },
+        { "name": "大河财立方", "time": "2026-07-27", "url": "https://app.dahecube.com/nweb/pc/spiderdetail.html?spidid=829033" }
+      ]
+    },
+    {
+      "id": "evt-20260728-004",
+      "tracks": ["国产算力"],
+      "targets": "凯盛科技股份有限公司 凯盛科技 600552.SH",
+      "eventTypes": ["公司公告", "技术进展", "供应链变动"],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "长期",
+      "evidenceStrength": "强",
+      "coreFact": "凯盛科技公告拟在蚌埠高新区建设TGV先进封装玻璃中试线，计划总投资约1.5亿元，推进玻璃通孔及金属填充关键工艺产业化，开展工艺优化、产品试制及客户验证。",
+      "marketInterpretation": "玻璃基板属AI算力芯片先进封装上游材料环节。",
+      "rumorNote": "",
+      "publishTime": "2026-07-27",
+      "sources": [
+        { "name": "上证报（华尔街见闻转）", "time": "2026-07-27", "url": "https://wallstreetcn.com/articles/3778072" },
+        { "name": "财联社", "time": "2026-07-28", "url": "https://www.cls.cn/detail/2438443" }
+      ]
+    },
+    {
+      "id": "evt-20260728-005",
+      "tracks": ["恒生科技"],
+      "targets": "小米集团 小米集团-W 01810.HK",
+      "eventTypes": ["公司公告", "技术进展"],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "强",
+      "coreFact": "小米官方宣布7月30日晚举办澎程系列技术发布会，将发布「小米昆仑技术架构」（昆仑平台、昆仑超级增程、昆仑全域安全），澎程N90 Max、N70两款增程SUV正式登场。",
+      "marketInterpretation": "",
+      "rumorNote": "",
+      "publishTime": "2026-07-27",
+      "sources": [
+        { "name": "上证报中国证券网（据小米官方微信）", "time": "2026-07-27", "url": "https://m.sohu.com/a/1055202585_120988576" },
+        { "name": "每日经济新闻", "time": "2026-07-28", "url": "https://emwap.eastmoney.com/a/202607283822535048.html" }
+      ]
+    },
+    {
+      "id": "evt-20260728-006",
+      "tracks": ["CPO"],
+      "targets": "英伟达 NVDA.US；博通 AVGO.US；行业整体",
+      "eventTypes": ["行业数据", "供应链变动", "机构观点"],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "长期",
+      "evidenceStrength": "中",
+      "coreFact": "集邦咨询报告称，英伟达Spectrum-X CPO交换机开始向部分合作伙伴出货，博通51.2T Bailly CPO交换机持续小量出货并完成Meta等部署验证，功耗较可插拔方案最高降低70%。",
+      "marketInterpretation": "机构指出光引擎良率、硅光子产能、先进封装资源三大供给瓶颈，预计垂直整合将成行业常态。",
+      "rumorNote": "",
+      "publishTime": "2026-07-27",
+      "sources": [
+        { "name": "证券时报网", "time": "2026-07-27", "url": "https://finance.eastmoney.com/a/202607273822214229.html" },
+        { "name": "界面新闻", "time": "2026-07-27", "url": "https://www.jiemian.com/article/14831885.html" }
+      ]
+    },
+    {
+      "id": "evt-20260728-007",
+      "tracks": ["存储芯片"],
+      "targets": "长鑫科技集团股份有限公司 长鑫科技 688825.SH",
+      "eventTypes": ["公司公告", "行业数据"],
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "中",
+      "coreFact": "长鑫科技7月27日于科创板上市，为科创板史上最大IPO，开盘涨471.59%，盘中总市值一度突破3.3万亿元，上市不足一小时成交额破千亿，创A股单日个股成交额纪录。",
+      "marketInterpretation": "Omdia数据显示公司为中国第一、全球第四大DRAM厂商。",
+      "rumorNote": "",
+      "publishTime": "2026-07-28",
+      "sources": [
+        { "name": "央广网（同花顺转载）", "time": "2026-07-28", "url": "https://m.10jqka.com.cn/20260728/c678479721.shtml" },
+        { "name": "华尔街见闻早餐FM", "time": "2026-07-28", "url": "https://finance.sina.cn/stock/jdts/2026-07-28/detail-inikiewm2612540.d.html" }
+      ]
+    },
+    {
+      "id": "evt-20260728-008",
+      "tracks": ["恒生科技"],
+      "targets": "理想汽车 理想汽车-W 02015.HK",
+      "eventTypes": ["供应链变动"],
+      "sentimentFactor": "风险因子",
+      "impactDirection": "负面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "中",
+      "coreFact": "理想汽车产品线负责人在社交平台披露：7月中下旬受前大灯供应短暂波动影响，理想i6产量较原计划减少约4000辆；目前供应和生产已恢复正常，公司正联合供应链追回进度。",
+      "marketInterpretation": "",
+      "rumorNote": "",
+      "publishTime": "2026-07-27",
+      "sources": [
+        { "name": "每日经济新闻", "time": "2026-07-27", "url": "https://www.mrjjxw.com/articles/2026-07-27/4517338.html" },
+        { "name": "ZAKER", "time": "2026-07-28", "url": "https://app.myzaker.com/news/article.php?pk=6a6810288e9f09638c69620e" }
+      ]
+    },
+    {
+      "id": "evt-20260728-009",
+      "tracks": ["半导体设备"],
+      "targets": "行业整体（涉及 ASML Holding NV，ASML.US）",
+      "eventTypes": ["供应链变动", "技术进展"],
+      "sentimentFactor": "待验证",
+      "impactDirection": "待观察",
+      "impactHorizon": "短期",
+      "evidenceStrength": "弱",
+      "coreFact": "The Information援引不具名人士报道，一家上海国资背景企业已开始量产浸没式DUV光刻设备，生产进展仍处早期阶段。消息致ASML股价一度下跌8.3%。",
+      "marketInterpretation": "媒体将当日A股光刻机板块异动与该报道关联，尚无官方确认。",
+      "rumorNote": "报道基于匿名信源，未见涉事企业及监管机构官方确认。",
+      "publishTime": "2026-07-28",
+      "sources": [
+        { "name": "财新网（转彭博电）", "time": "2026-07-28", "url": "https://database.caixin.com/2026-07-28/102468607.html" },
+        { "name": "虎嗅网", "time": "2026-07-28", "url": "https://www.huxiu.com/article/4878714.html" }
+      ]
+    },
+    {
+      "id": "evt-20260728-010",
+      "tracks": ["存储芯片"],
+      "targets": "行业整体",
+      "eventTypes": ["机构观点", "行业数据"],
+      "sentimentFactor": "风险因子",
+      "impactDirection": "待观察",
+      "impactHorizon": "中期",
+      "evidenceStrength": "弱",
+      "coreFact": "Jefferies报告称，市场预计三季度存储芯片价格环比上涨25%-30%，但其行业核实显示涨幅或更温和（15%-20%）；涨价主要由云服务提供商推动，消费电子厂商对加价显疲态。",
+      "marketInterpretation": "机构认为存储价格见顶时间可能早于预期。",
+      "rumorNote": "",
+      "publishTime": "2026-07-28",
+      "sources": [
+        { "name": "新浪财经", "time": "2026-07-28", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-07-28/doc-inikirnh9317622.shtml" }
+      ]
+    }
+  ],
+  "rumors": [
+    {
+      "id": "rum-20260728-001",
+      "track": "半导体设备",
+      "content": "自媒体称国产DUV光刻机量产主体为「上海宇量昇」，2026年产5台、2027年20台，供货中芯/华虹/长鑫，并称上海微电子中标1.1亿元光刻机项目；无任何官方公告或主流媒体核实。",
+      "heat": "高",
+      "platform": "股道帮（自媒体）",
+      "time": "2026-07-28"
+    },
+    {
+      "id": "rum-20260728-002",
+      "track": "CPO",
+      "content": "网友发现闲鱼曾挂出「全新索尔斯800G光模块」标价950元，引发与东山精密子公司索尔思光电失窃事件的关联猜测；无证据证实二者相关，相关链接疑似已下架。",
+      "heat": "中",
+      "platform": "闲鱼/网易号",
+      "time": "2026-07-28"
+    },
+    {
+      "id": "rum-20260728-003",
+      "track": "存储芯片",
+      "content": "「三星考虑在Galaxy A系列中采用中国低价DRAM以降低成本」仅见于媒体早餐转述，未注明原始出处，未见三星官方确认。",
+      "heat": "中",
+      "platform": "华尔街见闻早餐FM",
+      "time": "2026-07-28"
+    },
+    {
+      "id": "rum-20260728-004",
+      "track": "恒生科技",
+      "content": "汽车博主发布小米澎程发布会邀请函及测试车图片，称厦门澎程体验店7月30日开业，未经小米官方确认。",
+      "heat": "低",
+      "platform": "微博/CNMO科技",
+      "time": "2026-07-28"
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------------- 常量配置 ---------------- */
+  var TRACKS = ["半导体设备", "CPO", "国产算力", "存储芯片", "恒生科技"];
+  var EVENT_TYPES = ["政策监管", "公司公告", "行业数据", "供应链变动", "技术进展", "机构观点"];
+  var DIRECTIONS = ["正面", "负面", "中性", "待观察"];
+  var STRENGTHS = ["强", "中", "弱", "待验证"];
+
+  var DIRECTION_COLOR = {
+    "正面": "#00B42A",
+    "负面": "#F53F3F",
+    "中性": "#86909C",
+    "待观察": "#86909C"
+  };
+  var STRENGTH_RANK = { "强": 0, "中": 1, "弱": 2, "待验证": 3 };
+  var STRENGTH_STYLE = {
+    "强":   "background:rgba(22,93,255,0.10);color:#165DFF;",
+    "中":   "background:#F2F3F5;color:#4E5969;",
+    "弱":   "background:#F7F8FA;color:#86909C;",
+    "待验证": "background:rgba(255,125,0,0.10);color:#FF7D00;"
+  };
+
+  /* 筛选状态：每个维度单选，跨维度组合过滤 */
+  var state = { track: "全部", type: "全部", direction: "全部", strength: "全部" };
+  var DATA = null;
+
+  /* ---------------- 工具函数 ---------------- */
+  function esc(s) {
+    if (s === null || s === undefined) return "";
+    return String(s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+  function el(id) { return document.getElementById(id); }
+  function validUrl(u) { return typeof u === "string" && /^https?:\/\//i.test(u); }
+
+  /* ---------------- 筛选器渲染 ---------------- */
+  function renderFilters() {
+    var groups = [
+      { key: "track",     label: "关联赛道", options: ["全部"].concat(TRACKS) },
+      { key: "type",      label: "事件类型", options: ["全部"].concat(EVENT_TYPES) },
+      { key: "direction", label: "影响方向", options: ["全部"].concat(DIRECTIONS) },
+      { key: "strength",  label: "证据强度", options: ["全部"].concat(STRENGTHS) }
+    ];
+    var html = groups.map(function (g) {
+      var pills = g.options.map(function (opt) {
+        var active = state[g.key] === opt ? " active" : "";
+        return '<button type="button" class="pill' + active + '" data-group="' + g.key +
+               '" data-value="' + esc(opt) + '">' + esc(opt) + "</button>";
+      }).join("");
+      return '<div class="flex items-start gap-2 flex-wrap">' +
+             '<span class="text-[12px] text-[#86909C] leading-[28px] shrink-0">' + g.label + "</span>" +
+             '<div class="flex flex-wrap gap-2">' + pills + "</div></div>";
+    }).join("");
+    el("filterGroups").innerHTML = html;
+  }
+
+  /* 筛选点击（仅绑定一次，事件委托到持久存在的父容器） */
+  el("filterGroups").addEventListener("click", function (e) {
+    var btn = e.target.closest(".pill");
+    if (!btn) return;
+    state[btn.getAttribute("data-group")] = btn.getAttribute("data-value");
+    renderFilters();
+    renderEvents();
+  });
+
+  /* ---------------- 数据过滤与排序 ---------------- */
+  function filteredEvents() {
+    var list = (DATA && Array.isArray(DATA.events)) ? DATA.events : [];
+    return list.filter(function (ev) {
+      if (state.track !== "全部" && !(ev.tracks || []).includes(state.track)) return false;
+      if (state.type !== "全部" && !(ev.eventTypes || []).includes(state.type)) return false;
+      if (state.direction !== "全部" && ev.impactDirection !== state.direction) return false;
+      if (state.strength !== "全部" && ev.evidenceStrength !== state.strength) return false;
+      return true;
+    });
+  }
+
+  function sortByStrength(arr) {
+    return arr.slice().sort(function (a, b) {
+      var ra = STRENGTH_RANK.hasOwnProperty(a.evidenceStrength) ? STRENGTH_RANK[a.evidenceStrength] : 4;
+      var rb = STRENGTH_RANK.hasOwnProperty(b.evidenceStrength) ? STRENGTH_RANK[b.evidenceStrength] : 4;
+      if (ra !== rb) return ra - rb;
+      return String(b.publishTime || "").localeCompare(String(a.publishTime || ""));
+    });
+  }
+
+  /* ---------------- 事件卡片 ---------------- */
+  function tagHtml(text, style) {
+    return '<span class="tag" style="' + style + '">' + esc(text) + "</span>";
+  }
+
+  function sourceText(ev) {
+    var names = (ev.sources || []).map(function (s) { return s.name; }).filter(Boolean);
+    return names.join(" / ") || "待验证";
+  }
+
+  function primaryUrl(ev) {
+    var src = (ev.sources || []).find(function (s) { return validUrl(s.url); });
+    return src ? src.url : "";
+  }
+
+  function eventCard(ev) {
+    var dirColor = DIRECTION_COLOR[ev.impactDirection] || "#86909C";
+    var strengthStyle = STRENGTH_STYLE[ev.evidenceStrength] || STRENGTH_STYLE["待验证"];
+
+    var trackTags = (ev.tracks || []).map(function (t) {
+      return tagHtml(t, "background:rgba(22,93,255,0.08);color:#165DFF;");
+    }).join("");
+    var typeTags = (ev.eventTypes || []).map(function (t) {
+      return tagHtml(t, "background:#F2F3F5;color:#4E5969;");
+    }).join("");
+    var strengthTag = tagHtml("证据强度：" + (ev.evidenceStrength || "待验证"), strengthStyle);
+
+    var dirTag = tagHtml("影响方向：" + (ev.impactDirection || "待观察"),
+      "background:" + dirColor + "1A;color:" + dirColor + ";");
+
+    var hasMore = (ev.marketInterpretation && ev.marketInterpretation.trim()) ||
+                  (ev.rumorNote && ev.rumorNote.trim());
+
+    var moreBody = "";
+    if (hasMore) {
+      var parts = [];
+      if (ev.marketInterpretation && ev.marketInterpretation.trim()) {
+        parts.push('<div><span class="text-[12px] font-semibold text-[#4E5969]">市场解读：</span>' +
+                   '<span class="text-[12px] text-[#4E5969]">' + esc(ev.marketInterpretation) + "</span></div>");
+      }
+      if (ev.rumorNote && ev.rumorNote.trim()) {
+        parts.push('<div class="mt-2"><span class="text-[12px] font-semibold text-[#FF7D00]">传闻说明：</span>' +
+                   '<span class="text-[12px] text-[#4E5969]">' + esc(ev.rumorNote) + "</span></div>");
+      }
+      moreBody =
+        '<div class="mt-3">' +
+          '<button type="button" class="collapse-toggle text-[12px] link inline-flex items-center gap-1">' +
+            '<span class="collapse-arrow">▶</span><span class="toggle-text">展开市场解读</span>' +
+          "</button>" +
+          '<div class="collapse-body"><div class="collapse-inner">' +
+            '<div class="pt-2 border-t divider mt-2">' + parts.join("") + "</div>" +
+          "</div></div>" +
+        "</div>";
+    }
+
+    var url = primaryUrl(ev);
+    var linkHtml = url
+      ? '<a class="link text-[12px]" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">查看原文</a>'
+      : "";
+
+    return '' +
+    '<article class="card relative overflow-hidden">' +
+      '<span class="absolute left-0 top-0 bottom-0 w-[3px]" style="background:' + dirColor + ';"></span>' +
+      '<div class="p-4 sm:p-5 pl-5 sm:pl-6">' +
+        '<div class="flex flex-wrap items-center justify-between gap-2">' +
+          '<div class="flex flex-wrap items-center gap-2">' + trackTags + typeTags + strengthTag + dirTag + "</div>" +
+          '<span class="text-[12px] text-[#86909C] shrink-0">影响期限：' + esc(ev.impactHorizon || "待验证") + "</span>" +
+        "</div>" +
+        '<p class="text-[14px] font-semibold text-[#1D2129] leading-6 mt-3 prose-max">' + esc(ev.coreFact || "") + "</p>" +
+        '<p class="text-[12px] text-[#86909C] mt-2">关联公司/标的：' + esc(ev.targets || "行业整体") + "</p>" +
+        '<p class="text-[12px] text-[#86909C] mt-1">情绪因子类别：' + esc(ev.sentimentFactor || "待验证") + "</p>" +
+        moreBody +
+        '<div class="flex items-center justify-between gap-3 mt-3 pt-3 border-t divider">' +
+          '<span class="text-[12px] text-[#86909C] truncate">来源：' + esc(sourceText(ev)) +
+            ' · ' + esc(ev.publishTime || "待验证") + "</span>" +
+          linkHtml +
+        "</div>" +
+      "</div>" +
+    "</article>";
+  }
+
+  /* ---------------- 渲染：事件分组 ---------------- */
+  function renderEvents() {
+    var listEl = el("eventList");
+    var filtered = filteredEvents();
+
+    el("emptyState").classList.toggle("hidden", filtered.length > 0);
+
+    /* 若筛选维度未限定赛道，按全部赛道分组；限定了赛道则只显示该组 */
+    var groups = TRACKS.map(function (track) {
+      var evs = sortByStrength(filtered.filter(function (ev) {
+        return (ev.tracks || []).includes(track);
+      }));
+      return { track: track, events: evs };
+    }).filter(function (g) { return g.events.length > 0; });
+
+    /* 兜底：筛选后存在事件但不在任何固定赛道组内（数据异常时） */
+    var groupedIds = {};
+    groups.forEach(function (g) { g.events.forEach(function (ev) { groupedIds[ev.id] = true; }); });
+    var orphans = sortByStrength(filtered.filter(function (ev) { return !groupedIds[ev.id]; }));
+    if (orphans.length > 0) groups.push({ track: "其他", events: orphans });
+
+    listEl.innerHTML = groups.map(function (g) {
+      return '<section>' +
+        '<div class="flex items-baseline gap-2 mb-3">' +
+          '<h2 class="text-[16px] font-semibold text-[#1D2129]">' + esc(g.track) + "</h2>" +
+          '<span class="text-[12px] text-[#86909C]">' + g.events.length + " 条事件</span>" +
+        "</div>" +
+        '<div class="space-y-3">' + g.events.map(eventCard).join("") + "</div>" +
+      "</section>";
+    }).join("");
+  }
+
+  /* ---------------- 渲染：待验证热度观察 ---------------- */
+  function renderRumors() {
+    var rumors = (DATA && Array.isArray(DATA.rumors)) ? DATA.rumors : [];
+    el("rumorEmpty").classList.toggle("hidden", rumors.length > 0);
+    el("rumorList").innerHTML = rumors.map(function (r) {
+      return '' +
+      '<div class="rounded-[8px] p-3" style="background:#F2F3F5;">' +
+        '<div class="flex items-center justify-between gap-2">' +
+          '<span class="text-[12px] text-[#86909C]">' + esc(r.track || "行业整体") + "</span>" +
+          '<span class="tag" style="background:rgba(255,125,0,0.10);color:#FF7D00;">待验证</span>' +
+        "</div>" +
+        '<p class="text-[12px] text-[#4E5969] leading-5 mt-2">' + esc(r.content || "") + "</p>" +
+        '<div class="flex items-center justify-between gap-2 mt-2">' +
+          '<span class="text-[12px] text-[#86909C]">热度：' + esc(r.heat || "待验证") + "</span>" +
+          '<span class="text-[12px] text-[#86909C]">' + esc(r.platform || "社媒") +
+            (r.time ? " · " + esc(r.time) : "") + "</span>" +
+        "</div>" +
+      "</div>";
+    }).join("");
+  }
+
+  /* ---------------- 渲染：顶部统计 ---------------- */
+  function renderMeta() {
+    var meta = (DATA && DATA.meta) || {};
+    var events = (DATA && Array.isArray(DATA.events)) ? DATA.events : [];
+    var rumors = (DATA && Array.isArray(DATA.rumors)) ? DATA.rumors : [];
+    el("statCutoff").textContent = meta.dataCutoff || "待验证";
+    el("statWindow").textContent = meta.timeWindow || "过去24小时";
+    el("statEvents").textContent = String(events.length) + " 条";
+    el("statRumors").textContent = String(rumors.length) + " 条";
+  }
+
+  /* ---------------- 折叠交互（事件委托） ---------------- */
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest(".collapse-toggle");
+    if (!btn) return;
+    var body = btn.parentElement.querySelector(".collapse-body");
+    var arrow = btn.querySelector(".collapse-arrow");
+    var text = btn.querySelector(".toggle-text");
+    var open = body.classList.toggle("open");
+    arrow.classList.toggle("open", open);
+    text.textContent = open ? "收起" : "展开市场解读";
+  });
+
+  /* ---------------- 数据加载 ---------------- */
+  function useEmbedded() {
+    var node = el("embeddedData");
+    if (!node) return false;
+    try {
+      var json = JSON.parse(node.textContent);
+      if (!json || !Array.isArray(json.events)) return false;
+      DATA = json;
+      el("loadingState").classList.add("hidden");
+      renderMeta();
+      renderFilters();
+      renderEvents();
+      renderRumors();
+      el("statWindow").textContent = (json.meta && json.meta.timeWindow || "过去24小时") + "（本地预览数据）";
+      return true;
+    } catch (e) { return false; }
+  }
+
+  function init() {
+    /* 直接双击打开（file:// 协议）时浏览器会拦截 fetch 本地文件，
+       自动切换为内置示例数据渲染；部署到 HTTP 服务后仍读取 data/events.json */
+    if (location.protocol === "file:") {
+      if (useEmbedded()) return;
+    }
+    fetch("./data/events.json?_=" + Date.now(), { cache: "no-store" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function (json) {
+        if (!json || !Array.isArray(json.events)) throw new Error("invalid schema");
+        DATA = json;
+        el("loadingState").classList.add("hidden");
+        renderMeta();
+        renderFilters();
+        renderEvents();
+        renderRumors();
+      })
+      .catch(function () {
+        el("loadingState").classList.add("hidden");
+        el("errorState").classList.remove("hidden");
+      });
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>

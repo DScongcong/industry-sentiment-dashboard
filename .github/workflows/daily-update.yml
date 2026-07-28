@@ -1,0 +1,96 @@
+name: Daily Data Update
+
+# 说明：GitHub Actions 的 cron 使用 UTC 时间。
+# 北京时间（Asia/Shanghai, UTC+8）每天 09:00 执行 = UTC 每天 01:00。
+on:
+  schedule:
+    - cron: "0 1 * * *"   # 每天北京时间 09:00（UTC 01:00）
+  workflow_dispatch: {}    # 支持手动触发：Actions -> Daily Data Update -> Run workflow
+
+permissions:
+  contents: write          # 允许工作流提交并推送 data/events.json 更新
+
+# 防止多次触发并发写仓库：同分支同时只跑一个实例
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: 设置 Python 3.11 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: "scripts/requirements.txt"
+
+      - name: 安装依赖
+        run: |
+          echo "==> 安装 Python 依赖"
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements.txt
+
+      - name: 生成最新数据（含异常重试，最多3次）
+        env:
+          # 从仓库 Secrets 注入，禁止在代码中硬编码密钥
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+        run: |
+          set -e
+          for attempt in 1 2 3; do
+            echo "==> 第 ${attempt} 次尝试运行 scripts/generate_data.py"
+            if python scripts/generate_data.py; then
+              echo "==> 数据生成成功"
+              exit 0
+            fi
+            echo "!! 第 ${attempt} 次生成失败"
+            if [ "${attempt}" -lt 3 ]; then
+              sleep $((attempt * 30))
+              echo "==> 等待后重试"
+            fi
+          done
+          echo "!! 重试3次仍失败，保留现有 data/events.json，工作流标记失败"
+          exit 1
+
+      - name: 校验数据文件
+        run: |
+          echo "==> 校验 data/events.json 为合法 JSON 且包含 events 数组"
+          python - <<'EOF'
+          import json
+          with open("data/events.json", "r", encoding="utf-8") as f:
+              data = json.load(f)
+          assert isinstance(data.get("events"), list), "events 字段缺失或不是数组"
+          assert isinstance(data.get("rumors"), list), "rumors 字段缺失或不是数组"
+          print(f"校验通过：{len(data['events'])} 条事件，{len(data['rumors'])} 条待验证线索")
+          EOF
+
+      - name: 提交并推送更新
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/events.json
+          if git diff --cached --quiet; then
+            echo "==> 数据无变化，跳过提交"
+            exit 0
+          fi
+          COMMIT_MSG="chore(data): 每日资讯数据更新 $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git commit -m "${COMMIT_MSG}"
+          # 推送失败时拉取远端合并后重试，避免并发更新导致 push 被拒
+          for attempt in 1 2 3; do
+            if git push origin main; then
+              echo "==> 推送成功，将自动触发 GitHub Pages 部署"
+              exit 0
+            fi
+            echo "!! 推送失败（第 ${attempt} 次），尝试 pull --rebase 后重推"
+            git pull --rebase origin main || true
+          done
+          echo "!! 推送重试3次仍失败"
+          exit 1
