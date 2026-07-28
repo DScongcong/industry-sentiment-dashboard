@@ -32,8 +32,8 @@ from datetime import datetime, timezone, timedelta
 import requests
 
 # ---------------------------------------------------------------- 配置区 ---
-BASE_URL = os.environ.get("LLM_BASE_URL", "https://api.moonshot.cn/v1").rstrip("/")
-MODEL = os.environ.get("LLM_MODEL", "kimi-k2-0905-preview")
+BASE_URL = (os.environ.get("LLM_BASE_URL") or "https://api.moonshot.cn/v1").rstrip("/")
+MODEL = os.environ.get("LLM_MODEL") or "kimi-k2-0905-preview"
 API_KEY = os.environ.get("LLM_API_KEY", "")
 
 CST = timezone(timedelta(hours=8))                      # 中国标准时间 UTC+8
