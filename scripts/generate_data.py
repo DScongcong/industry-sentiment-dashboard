@@ -40,7 +40,7 @@ CST = timezone(timedelta(hours=8))                      # 中国标准时间 UTC
 NOW = datetime.now(CST)
 DATA_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "events.json")
 BACKUP_FILE = DATA_FILE + ".bak"
-REQUEST_TIMEOUT = 180                                   # 秒
+READ_TIMEOUT = 120                                    # 流式响应相邻数据块的最大间隔（秒）
 
 TRACKS = ["半导体设备", "CPO", "国产算力", "存储芯片", "恒生科技"]
 EVENT_TYPES = ["政策监管", "公司公告", "行业数据", "供应链变动", "技术进展", "机构观点"]
@@ -100,7 +100,8 @@ USER_PROMPT_TEMPLATE = """当前中国标准时间：{now}。
   ]
 }}
 
-要求：events 覆盖全部5个赛道（某赛道确无新增可不出现）；每条 events 的 sources 至少1个；
+要求：events 覆盖全部5个赛道（某赛道确无新增可不出现），每个赛道最多3条、总计不超过15条；
+每条 events 的 sources 至少1个；
 rumors 没有则输出空数组。所有事实必须有公开信源支撑，禁止主观演绎。"""
 
 
@@ -142,7 +143,8 @@ def search_news():
 
 # ------------------------------------------------------------ API 调用 ----
 def call_llm(prompt: str) -> str:
-    """调用 OpenAI 兼容的 chat completions 接口，返回文本内容。"""
+    """调用 OpenAI 兼容的 chat completions 接口（SSE 流式），返回文本内容。
+    流式读取可避免长输出时连接静默导致的 read timeout。"""
     if not API_KEY:
         raise RuntimeError("缺少环境变量 LLM_API_KEY，请先在 Secrets 中配置")
 
@@ -158,19 +160,39 @@ def call_llm(prompt: str) -> str:
             {"role": "user", "content": prompt},
         ],
         "temperature": 1,  # kimi-for-coding 模型仅允许 temperature=1；换其他模型可调低（如 0.2）
-        "response_format": {"type": "json_object"},  # 如所用模型不支持，删除此行
+        "response_format": {"type": "json_object"},  # 如所用模型不支持，脚本会自动去掉重试
+        "stream": True,
     }
-    resp = requests.post(url, headers=headers, json=payload, timeout=REQUEST_TIMEOUT)
+    # (连接超时, 读取超时)：读取超时按“相邻数据块间隔”计，生成期间连接持续有数据
+    resp = requests.post(url, headers=headers, json=payload,
+                         timeout=(30, READ_TIMEOUT), stream=True)
     if resp.status_code == 400 and "response_format" in payload:
         # 部分接口/模型不支持 JSON mode（response_format），去掉后重试一次
         print("[generate_data] 接口不支持 response_format，降级为普通模式重试")
+        resp.close()
         payload.pop("response_format")
-        resp = requests.post(url, headers=headers, json=payload, timeout=REQUEST_TIMEOUT)
+        resp = requests.post(url, headers=headers, json=payload,
+                             timeout=(30, READ_TIMEOUT), stream=True)
     if resp.status_code >= 400:
         # 打印响应体便于定位参数问题（密钥在响应中不会回显）
         raise RuntimeError(f"API 返回 {resp.status_code}: {resp.text[:500]}")
-    body = resp.json()
-    return body["choices"][0]["message"]["content"]
+
+    parts = []
+    for line in resp.iter_lines(decode_unicode=True):
+        if not line or not line.startswith("data:"):
+            continue
+        data = line[len("data:"):].strip()
+        if data == "[DONE]":
+            break
+        try:
+            chunk = json.loads(data)
+            parts.append(chunk["choices"][0].get("delta", {}).get("content", ""))
+        except (json.JSONDecodeError, KeyError, IndexError):
+            continue  # 忽略心跳/异常分块
+    content = "".join(parts)
+    if not content.strip():
+        raise RuntimeError("API 流式响应为空")
+    return content
 
 
 def extract_json(text: str) -> dict:
