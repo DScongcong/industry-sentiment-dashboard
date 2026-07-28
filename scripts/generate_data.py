@@ -130,7 +130,7 @@ def search_news():
             resp.raise_for_status()
             root = ET.fromstring(resp.content)
             lines = []
-            for it in root.findall(".//item")[:10]:
+            for it in root.findall(".//item")[:15]:
                 title = (it.findtext("title") or "").strip()
                 link = (it.findtext("link") or "").strip()
                 pub = (it.findtext("pubDate") or "").strip()
