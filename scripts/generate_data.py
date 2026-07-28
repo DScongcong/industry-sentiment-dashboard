@@ -141,7 +141,9 @@ def call_llm(prompt: str) -> str:
         print("[generate_data] 接口不支持 response_format，降级为普通模式重试")
         payload.pop("response_format")
         resp = requests.post(url, headers=headers, json=payload, timeout=REQUEST_TIMEOUT)
-    resp.raise_for_status()
+    if resp.status_code >= 400:
+        # 打印响应体便于定位参数问题（密钥在响应中不会回显）
+        raise RuntimeError(f"API 返回 {resp.status_code}: {resp.text[:500]}")
     body = resp.json()
     return body["choices"][0]["message"]["content"]
 
