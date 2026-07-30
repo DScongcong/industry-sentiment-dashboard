@@ -39,6 +39,8 @@ API_KEY = os.environ.get("LLM_API_KEY", "").strip()  # strip: 防止粘贴密钥
 TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE") or "1")
 # 每个赛道最多保留的事件条数（控制输出规模，避免生成超时）
 MAX_EVENTS_PER_TRACK = int(os.environ.get("MAX_EVENTS_PER_TRACK") or "3")
+# 大模型最大输出 token 数（DeepSeek 默认 4096，需调大以容纳长 JSON）
+MAX_TOKENS = int(os.environ.get("LLM_MAX_TOKENS") or "8192")
 
 CST = timezone(timedelta(hours=8))                      # 中国标准时间 UTC+8
 NOW = datetime.now(CST)
@@ -164,6 +166,7 @@ def call_llm(prompt: str) -> str:
             {"role": "user", "content": prompt},
         ],
         "temperature": TEMPERATURE,  # 由环境变量 LLM_TEMPERATURE 控制，默认 1
+        "max_tokens": MAX_TOKENS,    # DeepSeek 默认仅 4096，长 JSON 会被截断，必须显式调大
         "response_format": {"type": "json_object"},  # 如所用模型不支持，脚本会自动去掉重试
         "stream": True,
     }
@@ -199,9 +202,46 @@ def call_llm(prompt: str) -> str:
     return content
 
 
+def repair_truncated(text: str) -> dict:
+    """模型输出被 max_tokens 截断时的兜底修复：
+    从尾部回退到最后一个完整对象，丢弃残缺尾巴并闭合括号后解析。"""
+    last = text.rfind("}")
+    while last > 0:
+        frag = text[:last + 1]
+        # 扫描括号栈（跳过字符串内部），确认截断点不在字符串中间
+        stack = []
+        in_str = esc = False
+        for ch in frag:
+            if in_str:
+                if esc:
+                    esc = False
+                elif ch == "\\":
+                    esc = True
+                elif ch == '"':
+                    in_str = False
+            elif ch == '"':
+                in_str = True
+            elif ch in "{[":
+                stack.append(ch)
+            elif ch in "}]" and stack:
+                stack.pop()
+        if not in_str:
+            closers = "".join("}" if c == "{" else "]" for c in reversed(stack))
+            candidate = frag.rstrip().rstrip(",")
+            try:
+                result = json.loads(candidate + closers)
+                print("[generate_data] 检测到输出截断，已自动修复（丢弃尾部残缺内容）")
+                return result
+            except json.JSONDecodeError:
+                pass
+        last = text.rfind("}", 0, last)
+    raise ValueError("无法修复截断的 JSON")
+
+
 def extract_json(text: str) -> dict:
     """容错解析：先剥离可能的 markdown 代码块包裹；若整体解析失败，
-    退而截取首个 { 到末个 } 之间的内容再解析（容忍模型输出的前后废话）。"""
+    退而截取首个 { 到末个 } 之间的内容再解析（容忍模型输出的前后废话）；
+    仍失败则尝试截断修复（模型输出被 max_tokens 截断的场景）。"""
     cleaned = text.strip()
     if cleaned.startswith("```"):
         lines = cleaned.splitlines()
@@ -216,7 +256,11 @@ def extract_json(text: str) -> dict:
     except json.JSONDecodeError:
         start, end = cleaned.find("{"), cleaned.rfind("}")
         if start != -1 and end > start:
-            return json.loads(cleaned[start:end + 1])
+            sliced = cleaned[start:end + 1]
+            try:
+                return json.loads(sliced)
+            except json.JSONDecodeError:
+                return repair_truncated(sliced)
         raise
 
 
