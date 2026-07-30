@@ -356,6 +356,13 @@ def main() -> int:
     # 2) 解析 + 校验（失败则保留旧文件并退出非零，触发 Actions 重试）
     try:
         data = extract_json(raw_text)
+        # 截断修复可能丢失尾部字段，补齐缺省值保证数据契约完整
+        data.setdefault("rumors", [])
+        data.setdefault("meta", {
+            "dataCutoff": NOW.strftime("%Y-%m-%d %H:%M") + "（中国标准时间）",
+            "timeWindow": "过去24小时",
+            "generatedAt": NOW.isoformat(),
+        })
         validate_data(data)
     except (json.JSONDecodeError, ValueError, KeyError) as e:
         print(f"[generate_data] 输出解析/校验失败，保留现有数据文件。原因：{e}")
