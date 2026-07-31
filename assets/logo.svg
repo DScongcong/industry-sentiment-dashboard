@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- TrackWatch 导航栏 Logo：透明底，雷达盘信号蓝线条 + 橙色异动点 -->
+  <g fill="none" stroke="#165DFF" stroke-width="3" stroke-linecap="round">
+    <path d="M10 29a14 14 0 0 1 28 0"/>
+    <path d="M16 29a8 8 0 0 1 16 0"/>
+    <path d="M8 29h32"/>
+    <path d="M24 29l9.9-9.9"/>
+  </g>
+  <circle cx="33.9" cy="19.1" r="3.2" fill="#FF7D00"/>
+</svg>
