@@ -101,7 +101,8 @@ USER_PROMPT_TEMPLATE = """当前中国标准时间：{now}。
       "content": "社媒高热度但无权威佐证的线索描述",
       "heat": "高/中/低",
       "platform": "来源平台",
-      "time": "YYYY-MM-DD"
+      "time": "YYYY-MM-DD",
+      "url": "线索原文链接（如有，否则空字符串）"
     }}
   ]
 }}
@@ -180,6 +181,7 @@ def search_social():
         ("微博热搜", "https://60s.viki.moe/v2/weibo"),
         ("知乎热榜", "https://60s.viki.moe/v2/zhihu"),
         ("头条热榜", "https://60s.viki.moe/v2/toutiao"),
+        ("抖音热点", "https://60s.viki.moe/v2/douyin"),
     ]
     blocks = []
     for name, url in sources:
@@ -200,8 +202,8 @@ def search_social():
                 suffix = f" {link}" if link else ""
                 lines.append(f"- [热度{heat}] {title}{suffix}")
             if lines:
-                blocks.append(f"## {name}（赛道相关）\n" + "\n".join(lines[:8]))
-                print(f"[generate_data] 社媒检索 {name}: {len(lines[:8])} 条")
+                blocks.append(f"## {name}（赛道相关）\n" + "\n".join(lines[:10]))
+                print(f"[generate_data] 社媒检索 {name}: {len(lines[:10])} 条")
         except Exception as e:
             print(f"[generate_data] 社媒检索 {name} 失败：{e}")
     return "\n\n".join(blocks) if blocks else None
@@ -389,6 +391,7 @@ def validate_data(data: dict) -> None:
         r.setdefault("heat", "待验证")
         r.setdefault("platform", "社媒")
         r.setdefault("time", NOW.strftime("%Y-%m-%d"))
+        r.setdefault("url", "")
 
 
 # ---------------------------------------------------------------- 主流程 ---
@@ -415,10 +418,11 @@ def main() -> int:
     social_context = search_social()
     if social_context:
         prompt += ("\n\n以下为社媒平台热度线索（未经权威信源证实）。"
-                   "仅可从中提炼与上述赛道相关的内容填充 rumors 数组："
-                   "platform 填具体平台名（如 Reddit r/wallstreetbets、微博热搜），"
-                   "heat 按讨论量/热度值分档（高/中/低），content 客观描述该线索内容；"
-                   "严禁将社媒线索用作 events 的事实依据；没有相关线索则 rumors 输出空数组：\n"
+                   "请从中选取3-5条与上述赛道相关的线索填充 rumors 数组："
+                   "platform 填具体平台名（如 微博热搜、知乎热榜、头条热榜、抖音热点），"
+                   "heat 按热度值分档（高/中/低），content 客观描述线索内容（50字以内），"
+                   "url 直接取线索中的链接；"
+                   "严禁将社媒线索用作 events 的事实依据；确无相关线索则 rumors 输出空数组：\n"
                    + social_context)
 
     # 1) 调用大模型

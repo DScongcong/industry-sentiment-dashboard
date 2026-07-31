@@ -1008,6 +1008,10 @@
     var rumors = (DATA && Array.isArray(DATA.rumors)) ? DATA.rumors : [];
     el("rumorEmpty").classList.toggle("hidden", rumors.length > 0);
     el("rumorList").innerHTML = rumors.map(function (r) {
+      var linkHtml = validUrl(r.url)
+        ? '<a class="link text-[12px] shrink-0" href="' + esc(r.url) +
+          '" target="_blank" rel="noopener noreferrer">查看线索</a>'
+        : "";
       return '' +
       '<div class="rounded-[8px] p-3 rumor-item" style="background:#F2F3F5;">' +
         '<div class="flex items-center justify-between gap-2">' +
@@ -1017,8 +1021,11 @@
         '<p class="text-[12px] text-[#4E5969] leading-5 mt-2">' + esc(r.content || "") + "</p>" +
         '<div class="flex items-center justify-between gap-2 mt-2">' +
           '<span class="text-[12px] text-[#86909C]">热度：' + esc(r.heat || "待验证") + "</span>" +
-          '<span class="text-[12px] text-[#86909C]">' + esc(r.platform || "社媒") +
-            (r.time ? " · " + esc(r.time) : "") + "</span>" +
+          '<span class="inline-flex items-center gap-2 min-w-0">' +
+            '<span class="text-[12px] text-[#86909C] truncate">' + esc(r.platform || "社媒") +
+              (r.time ? " · " + esc(r.time) : "") + "</span>" +
+            linkHtml +
+          "</span>" +
         "</div>" +
       "</div>";
     }).join("");
