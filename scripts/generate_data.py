@@ -48,7 +48,7 @@ DATA_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "events.json")
 BACKUP_FILE = DATA_FILE + ".bak"
 READ_TIMEOUT = 120                                    # 流式响应相邻数据块的最大间隔（秒）
 
-TRACKS = ["半导体设备", "CPO", "国产算力", "存储芯片", "恒生科技"]
+TRACKS = ["半导体设备", "CPO", "国产算力", "存储芯片", "恒生科技", "美股市场"]
 EVENT_TYPES = ["政策监管", "公司公告", "行业数据", "供应链变动", "技术进展", "机构观点"]
 DIRECTIONS = ["正面", "负面", "中性", "待观察"]
 STRENGTHS = ["强", "中", "弱", "待验证"]
@@ -63,8 +63,8 @@ SYSTEM_PROMPT = (
 )
 
 USER_PROMPT_TEMPLATE = """当前中国标准时间：{now}。
-请采集以下5个赛道在过去24小时内（截至上述时间）公开发布的重要资讯：
-半导体设备、CPO、国产算力、存储芯片、恒生科技。
+请采集以下{track_count}个赛道在过去24小时内（截至上述时间）公开发布的重要资讯：
+{track_list}。
 
 信源优先级：①监管/交易所/上市公司公告/官方新闻稿；②行业协会/政府部门/权威研究机构；
 ③主流财经媒体；④社交媒体仅作热度线索，不得单独作为事实依据。
@@ -80,7 +80,7 @@ USER_PROMPT_TEMPLATE = """当前中国标准时间：{now}。
   "events": [
     {{
       "id": "evt-YYYYMMDD-001",
-      "tracks": ["从5个赛道中选择，可多选"],
+      "tracks": ["从上述赛道中选择，可多选"],
       "targets": "公司全称+简称+代码；无明确标的填 行业整体",
       "eventTypes": ["政策监管/公司公告/行业数据/供应链变动/技术进展/机构观点，可多选"],
       "sentimentFactor": "盈利因子/政策因子/流动性因子/风险因子/待验证",
@@ -106,7 +106,7 @@ USER_PROMPT_TEMPLATE = """当前中国标准时间：{now}。
   ]
 }}
 
-要求：events 覆盖全部5个赛道（某赛道确无新增可不出现），每个赛道最多{max_per_track}条、总计不超过{max_total}条；
+要求：events 覆盖全部{track_count}个赛道（某赛道确无新增可不出现），每个赛道最多{max_per_track}条、总计不超过{max_total}条；
 每条 events 的 sources 至少1个；
 rumors 没有则输出空数组。所有事实必须有公开信源支撑，禁止主观演绎。
 输出控制：每条 events 的 sources 只保留1-2个最权威来源；marketInterpretation 不超过50字；
@@ -342,6 +342,8 @@ def main() -> int:
         now=NOW.strftime("%Y-%m-%d %H:%M"),
         now_short=NOW.strftime("%Y-%m-%d %H:%M"),
         now_iso=NOW.isoformat(),
+        track_count=len(TRACKS),
+        track_list="、".join(TRACKS),
         max_per_track=MAX_EVENTS_PER_TRACK,
         max_total=MAX_EVENTS_PER_TRACK * len(TRACKS),
     )
