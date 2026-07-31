@@ -158,56 +158,52 @@ SOCIAL_KEYWORDS = [
 ]
 
 
+def _tolerant_json_loads(raw: str):
+    """宽松 JSON 解析：先剥离控制字符（部分聚合接口会混入原始换行导致标准解析失败）。"""
+    import re as _re
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        cleaned = _re.sub(r"[\x00-\x08\x0b-\x1f]", " ", raw)
+        return json.loads(cleaned)
+
+
 def search_social():
     """
-    抓取社媒平台热度线索（Reddit 热门帖 + 微博热搜），仅用于 rumors 数组。
-    X/Twitter 无免费官方接口（搜索 API 为付费档），Reddit 覆盖同类传闻场景。
+    抓取社媒热度线索（微博/知乎/头条热榜，经 60s 公共聚合接口），仅用于 rumors 数组。
+    说明：X/Twitter 无免费官方接口（搜索 API 为付费档）；Reddit、Stocktwits 均封锁
+    数据中心 IP，GitHub Actions 无法直连，故以中文社媒热榜按赛道关键词过滤替代。
     全部失败时返回 None 降级，不影响主流程。
     """
-    blocks = []
     ua = {"User-Agent": "Mozilla/5.0 (compatible; sentiment-dashboard/1.0)"}
-
-    # 1) Reddit 热门（美股传闻主要发源地，ups 可直接作热度指标）
-    for sub in ["wallstreetbets", "stocks", "semiconductors"]:
+    sources = [
+        ("微博热搜", "https://60s.viki.moe/v2/weibo"),
+        ("知乎热榜", "https://60s.viki.moe/v2/zhihu"),
+        ("头条热榜", "https://60s.viki.moe/v2/toutiao"),
+    ]
+    blocks = []
+    for name, url in sources:
         try:
-            resp = requests.get(f"https://www.reddit.com/r/{sub}/hot.json?limit=12",
-                                headers=ua, timeout=20)
+            resp = requests.get(url, headers=ua, timeout=20)
             resp.raise_for_status()
+            payload = _tolerant_json_loads(resp.text)
+            items = payload.get("data") or []
             lines = []
-            for child in resp.json().get("data", {}).get("children", []):
-                d = child.get("data", {})
-                title = (d.get("title") or "").strip()
-                if not title or d.get("stickied"):
+            for it in items:
+                title = str(it.get("title") or it.get("name") or "").strip()
+                if not title:
                     continue
-                ups = d.get("ups", 0)
-                link = "https://www.reddit.com" + d.get("permalink", "")
-                lines.append(f"- [↑{ups}] {title} {link}")
+                if not any(k.lower() in title.lower() for k in SOCIAL_KEYWORDS):
+                    continue
+                heat = it.get("hot_value") or it.get("hot") or it.get("heat") or 0
+                link = it.get("link") or it.get("url") or ""
+                suffix = f" {link}" if link else ""
+                lines.append(f"- [热度{heat}] {title}{suffix}")
             if lines:
-                blocks.append(f"## Reddit r/{sub}\n" + "\n".join(lines[:10]))
-                print(f"[generate_data] 社媒检索 r/{sub}: {len(lines[:10])} 条")
+                blocks.append(f"## {name}（赛道相关）\n" + "\n".join(lines[:8]))
+                print(f"[generate_data] 社媒检索 {name}: {len(lines[:8])} 条")
         except Exception as e:
-            print(f"[generate_data] 社媒检索 r/{sub} 失败：{e}")
-
-    # 2) 微博热搜（按赛道关键词过滤）
-    try:
-        resp = requests.get("https://weibo.com/ajax/side/hotSearch", headers=ua, timeout=20)
-        resp.raise_for_status()
-        items = resp.json().get("data", {}).get("realtime", [])
-        lines = []
-        for it in items:
-            word = (it.get("word") or it.get("note") or "").strip()
-            if not word:
-                continue
-            if not any(k.lower() in word.lower() for k in SOCIAL_KEYWORDS):
-                continue
-            heat = it.get("raw_hot") or it.get("num") or 0
-            lines.append(f"- [热度{heat}] {word}")
-        if lines:
-            blocks.append("## 微博热搜（赛道相关）\n" + "\n".join(lines[:10]))
-            print(f"[generate_data] 社媒检索 微博热搜: {len(lines[:10])} 条")
-    except Exception as e:
-        print(f"[generate_data] 社媒检索 微博热搜 失败：{e}")
-
+            print(f"[generate_data] 社媒检索 {name} 失败：{e}")
     return "\n\n".join(blocks) if blocks else None
 
 
