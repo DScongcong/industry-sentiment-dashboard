@@ -149,6 +149,68 @@ def search_news():
     return "\n\n".join(blocks) if blocks else None
 
 
+# 微博热搜中与赛道相关的关键词
+SOCIAL_KEYWORDS = [
+    "芯片", "半导体", "算力", "光刻", "存储", "CPO", "光模块", "英伟达", "NVIDIA",
+    "台积电", "三星", "海力士", "美光", "中芯", "华为", "小米", "腾讯", "阿里",
+    "美团", "京东", "网易", "理想", "蔚来", "小鹏", "美股", "纳指", "纳斯达克",
+    "标普", "美联储", "降息", "特斯拉", "苹果", "微软", "谷歌", "Meta", "博通", "AMD",
+]
+
+
+def search_social():
+    """
+    抓取社媒平台热度线索（Reddit 热门帖 + 微博热搜），仅用于 rumors 数组。
+    X/Twitter 无免费官方接口（搜索 API 为付费档），Reddit 覆盖同类传闻场景。
+    全部失败时返回 None 降级，不影响主流程。
+    """
+    blocks = []
+    ua = {"User-Agent": "Mozilla/5.0 (compatible; sentiment-dashboard/1.0)"}
+
+    # 1) Reddit 热门（美股传闻主要发源地，ups 可直接作热度指标）
+    for sub in ["wallstreetbets", "stocks", "semiconductors"]:
+        try:
+            resp = requests.get(f"https://www.reddit.com/r/{sub}/hot.json?limit=12",
+                                headers=ua, timeout=20)
+            resp.raise_for_status()
+            lines = []
+            for child in resp.json().get("data", {}).get("children", []):
+                d = child.get("data", {})
+                title = (d.get("title") or "").strip()
+                if not title or d.get("stickied"):
+                    continue
+                ups = d.get("ups", 0)
+                link = "https://www.reddit.com" + d.get("permalink", "")
+                lines.append(f"- [↑{ups}] {title} {link}")
+            if lines:
+                blocks.append(f"## Reddit r/{sub}\n" + "\n".join(lines[:10]))
+                print(f"[generate_data] 社媒检索 r/{sub}: {len(lines[:10])} 条")
+        except Exception as e:
+            print(f"[generate_data] 社媒检索 r/{sub} 失败：{e}")
+
+    # 2) 微博热搜（按赛道关键词过滤）
+    try:
+        resp = requests.get("https://weibo.com/ajax/side/hotSearch", headers=ua, timeout=20)
+        resp.raise_for_status()
+        items = resp.json().get("data", {}).get("realtime", [])
+        lines = []
+        for it in items:
+            word = (it.get("word") or it.get("note") or "").strip()
+            if not word:
+                continue
+            if not any(k.lower() in word.lower() for k in SOCIAL_KEYWORDS):
+                continue
+            heat = it.get("raw_hot") or it.get("num") or 0
+            lines.append(f"- [热度{heat}] {word}")
+        if lines:
+            blocks.append("## 微博热搜（赛道相关）\n" + "\n".join(lines[:10]))
+            print(f"[generate_data] 社媒检索 微博热搜: {len(lines[:10])} 条")
+    except Exception as e:
+        print(f"[generate_data] 社媒检索 微博热搜 失败：{e}")
+
+    return "\n\n".join(blocks) if blocks else None
+
+
 # ------------------------------------------------------------ API 调用 ----
 def call_llm(prompt: str) -> str:
     """调用 OpenAI 兼容的 chat completions 接口（SSE 流式），返回文本内容。
@@ -352,6 +414,16 @@ def main() -> int:
                    "请只根据这些线索整理事件，禁止编造线索之外的事件、公司与链接；"
                    "sources 的 name/time/url 直接取自线索中的来源、发布时间与链接：\n"
                    + news_context)
+
+    # 社媒热度线索：仅供 rumors 使用，与 events 事实来源严格隔离
+    social_context = search_social()
+    if social_context:
+        prompt += ("\n\n以下为社媒平台热度线索（未经权威信源证实）。"
+                   "仅可从中提炼与上述赛道相关的内容填充 rumors 数组："
+                   "platform 填具体平台名（如 Reddit r/wallstreetbets、微博热搜），"
+                   "heat 按讨论量/热度值分档（高/中/低），content 客观描述该线索内容；"
+                   "严禁将社媒线索用作 events 的事实依据；没有相关线索则 rumors 输出空数组：\n"
+                   + social_context)
 
     # 1) 调用大模型
     print("[generate_data] 调用大模型 API ...")
