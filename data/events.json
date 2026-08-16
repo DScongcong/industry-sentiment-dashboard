@@ -1,8 +1,8 @@
 {
   "meta": {
-    "dataCutoff": "2026-08-16 09:20（中国标准时间）",
+    "dataCutoff": "2026-08-16 10:35（中国标准时间）",
     "timeWindow": "过去24小时",
-    "generatedAt": "2026-08-16T09:20:20.271649+08:00"
+    "generatedAt": "2026-08-16T10:35:17.111446+08:00"
   },
   "events": [
     {
@@ -20,7 +20,7 @@
       "impactHorizon": "短期",
       "evidenceStrength": "强",
       "coreFact": "应用材料发布财报，半导体设备订单已排至2030年，业绩强劲，但股价下跌。",
-      "marketInterpretation": "市场担忧行业周期见顶，或对利好已充分预期。",
+      "marketInterpretation": "市场担忧行业周期见顶，利好兑现。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -45,7 +45,7 @@
       "impactHorizon": "中期",
       "evidenceStrength": "强",
       "coreFact": "富乐德拟发行可转债募资不超过11.76亿元，用于大连精密洗净及再生服务产线建设等项目。",
-      "marketInterpretation": "扩产有望提升公司产能和市场份额。",
+      "marketInterpretation": "扩产彰显行业景气，利好公司长期发展。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -69,15 +69,15 @@
       "impactDirection": "正面",
       "impactHorizon": "长期",
       "evidenceStrength": "中",
-      "coreFact": "日本对中国芯片实施限制，但中国工厂一个月后仍正常运转，显示国产替代能力增强。",
-      "marketInterpretation": "国产半导体设备自主化进程加速。",
+      "coreFact": "马来西亚半导体产业受外资推动，八家外资工厂奠定基础，半导体设备需求有望增长。",
+      "marketInterpretation": "东南亚供应链多元化趋势利好设备商。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
         {
-          "name": "新浪网",
+          "name": "Moomoo",
           "time": "2026-08-15",
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB2SnZtOXZJVDlhdnZiZlRKZXFuMFREYUdJVnY4Yy1TYjVPOEZ3X2x0YVl5eEJteVJ1Z1pPSHhNNzJvdFZoVFg0MGFwVHF4WmR3M09BUm1lSE1YdllBeElyMHYzX3B5T3dVMkRTXzNBQjY?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPU1pkWkU5Ym5uTHkxcXJrek8xMU1Hcm5heVM2c3M1bDRDbnVFYWdJWjJtcV93NGVXb1I4cHU4S1BZQmRrWkN4UHFxT3hRa1RJNTZLZFFjRk5FY1NlUmdnWWZWZ2lJbUZDeHlxRVp4WGZTR0lYa1NjUnZCQ3lROGtNZ1o3YUQ2UlhzRnphamQxdWJzczB1b1V5OVBmUEZvc21NMDZZNnozWlpmX3VTWWJ3V0ZQNEdsQQ?oc=5"
         }
       ]
     },
@@ -88,32 +88,56 @@
       ],
       "targets": "英伟达（NVDA）",
       "eventTypes": [
-        "技术进展",
-        "供应链变动"
+        "技术进展"
       ],
       "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "强",
-      "coreFact": "英伟达宣布Spectrum-X以太网光通信交换机全面量产，采用CPO技术，激光器数量减少4倍，供应商包括天孚通信。",
-      "marketInterpretation": "CPO技术商用加速，利好相关供应链公司。",
+      "coreFact": "英伟达宣布全球首款CPO交换机Spectrum-X Ethernet Photonics全面量产，采用5家供应商，激光器数量减少4倍。",
+      "marketInterpretation": "CPO技术商业化加速，利好光模块产业链。",
       "rumorNote": "",
-      "publishTime": "2026-08-15",
+      "publishTime": "2026-08-16",
       "sources": [
-        {
-          "name": "财联社",
-          "time": "2026-08-15",
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5PWW4zYlJPdU4tbFBjcFlFV01IRFh6dXhQUUNqbUFwOUxVNVZENGlLSWdLQ1dKZWhhUEZtTzlReWtYak45azNkRg?oc=5"
-        },
         {
           "name": "StorageReview.com",
           "time": "2026-08-16",
           "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPUjN0WGJwTjhYMWVhdEtHNFpFd1VJTktiT1VxZk1fN1liMlk2bUJRWERRd19VZHZhVjNrR2hhd2Y1UzJCeWdJWkk1MUU5QjcydkZwb2FCUGhxY3ZoNWc4djZCS2p6dVB4UWZ2dWRWWmRVV1R0RF9mVDJRVHZxcWlyUkhuY3ZCVU9VVDJpVFZ6NmJ5NkJ6bmFjaHdTX2NEN0tHbDNmV0pzTW1nRjFmX1hwYmRvQTdyMlFDdmpKMkJiY0FveGdpUG13MDdsTDBnSlVZTlM0OGxqeGhmYU9ocWZ1R2pTcjBTVUNsQnR4ONIB8gFBVV95cUxOMFVSTWtQZmZTQzBNeS1nLWllSGlqMVVCVGlPLVo1cTFVQ1FRU2JUZE5FTjd6bU1WVFNXUHNHNm5EMjNuTHY5X1NIOW5PQnJYUTAtaUY2OG5jU1VhOUtRdm5TT01zTnJ3WjNIamRzeEJlbFJKR182Nm1DVC1nYmxVWkNYTVBNeHlDaUNHcGhKT3A5Y1NWRUpQTElWWkpOTm1RNmhRazJHRTVmQUtNOUNGVV9wNy0tTXhMZk1xanNGZmc0ZURlXzdjMDZwWlpWUmxXTjV1dVJaaDE1Nm1KcS1rRDFhS3dRZG1CU3dTTThSRXZFZw?oc=5"
+        },
+        {
+          "name": "财联社",
+          "time": "2026-08-15",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5PWW4zYlJPdU4tbFBjcFlFV01IRFh6dXhQUUNqbUFwOUxVNVZENGlLSWdLQ1dKZWhhUEZtTzlReWtYak45azNkRg?oc=5"
         }
       ]
     },
     {
       "id": "evt-20260816-005",
+      "tracks": [
+        "CPO"
+      ],
+      "targets": "台积电（TSM）",
+      "eventTypes": [
+        "技术进展"
+      ],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "长期",
+      "evidenceStrength": "中",
+      "coreFact": "台积电助力英伟达Feynman架构，采用A16工艺、SoIC和CPO，预计2028年下半年到来。",
+      "marketInterpretation": "先进封装与CPO结合，提升算力密度。",
+      "rumorNote": "",
+      "publishTime": "2026-08-16",
+      "sources": [
+        {
+          "name": "新浪财经",
+          "time": "2026-08-16",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQc24zc21GV2xVNk00Q3JEQmwxR3dqRE13RUV1WnlVZHJicjlfZkdUdHppdFU0SURYblI5TzZDZVY4ZENCRUM2SlpETmxmUXdDaWs0Xy1XSFR3MHpRSEM3dnRzTHdyVEpTVExwLDRGR2RNMHZjS24yTWI4OUg2eWZOVnB2RGVEMmYtclhSSnc2MnNrWWZNZnpBeUVJSzdnM3VyMFBmNzJnWml1MFJCR21Cb1lR?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260816-006",
       "tracks": [
         "CPO"
       ],
@@ -125,34 +149,33 @@
       "impactDirection": "正面",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "CPO概念股集体大涨，多股涨停，主力资金持续加码。",
-      "marketInterpretation": "英伟达CPO量产消息刺激市场情绪。",
+      "coreFact": "CPO概念股集体大涨，阿莱德20cm涨停，主力资金持续加码。",
+      "marketInterpretation": "市场情绪高涨，资金关注度高。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
         {
           "name": "东方财富",
           "time": "2026-08-15",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1UOTZSQkJLZnA2aWxwM0ZsR3poandUa1luUjFqYUJDRE1md0xyVkwxM3EzRmlTa29uZEpfQ0M0TklWUkpocG5mRkNYaVlHR3pCa3dOZDh6V0Vub09vT2x1Tg?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxZDdVZndxemVCQzNXQ2k4Z21UVGxjTzcwRlR6bDQtTUVFaEJUNVV5TVVtcVFRUnM2Z2NXRHQySGVZcF8zc2VBNkNfZnh2bUdmSm5leHpabC15QXRkYy14TQ?oc=5"
         }
       ]
     },
     {
-      "id": "evt-20260816-006",
+      "id": "evt-20260816-007",
       "tracks": [
         "国产算力"
       ],
       "targets": "行业整体",
       "eventTypes": [
-        "行业数据",
-        "供应链变动"
+        "行业数据"
       ],
       "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
       "impactHorizon": "中期",
-      "evidenceStrength": "强",
+      "evidenceStrength": "中",
       "coreFact": "国产算力迎扩张浪潮，大厂超预期加码投资，产业链多环节开启扩产。",
-      "marketInterpretation": "AI算力需求旺盛，国产算力产业链景气度提升。",
+      "marketInterpretation": "算力需求旺盛，国产替代加速。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -164,7 +187,7 @@
       ]
     },
     {
-      "id": "evt-20260816-007",
+      "id": "evt-20260816-008",
       "tracks": [
         "国产算力"
       ],
@@ -174,10 +197,10 @@
       ],
       "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
-      "impactHorizon": "中期",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
       "coreFact": "全国首个AI4E千卡集群国赛首秀，海光DCU作为算力底座，160所高校1900人参赛。",
-      "marketInterpretation": "海光DCU在国产算力生态中地位凸显。",
+      "marketInterpretation": "海光DCU生态拓展，国产算力应用落地。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -189,7 +212,7 @@
       ]
     },
     {
-      "id": "evt-20260816-008",
+      "id": "evt-20260816-009",
       "tracks": [
         "国产算力"
       ],
@@ -202,7 +225,7 @@
       "impactHorizon": "长期",
       "evidenceStrength": "强",
       "coreFact": "江苏省提出加快国产算力芯片、服务器在轨验证，支持太空超算中心等前瞻性试验建设。",
-      "marketInterpretation": "政策支持国产算力在特殊场景的应用。",
+      "marketInterpretation": "政策支持国产算力，拓展应用场景。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -214,7 +237,32 @@
       ]
     },
     {
-      "id": "evt-20260816-009",
+      "id": "evt-20260816-010",
+      "tracks": [
+        "国产算力"
+      ],
+      "targets": "行业整体",
+      "eventTypes": [
+        "技术进展"
+      ],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "中期",
+      "evidenceStrength": "中",
+      "coreFact": "又一国产AI大模型宣布开源，国产大模型掀起开源潮。",
+      "marketInterpretation": "开源生态繁荣，降低算力应用门槛。",
+      "rumorNote": "",
+      "publishTime": "2026-08-15",
+      "sources": [
+        {
+          "name": "央广财经",
+          "time": "2026-08-15",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBHMG45VDNiUmhZLTM1TjlyWlZyakpIVTRzOW9WUXNFVUpVeHJkbENuaFFmN3QyRlJvdzRWbm01TGtOMDlXMThsdHh0ZlBTTF9JYmV1LXR4a2RTemlNMVRYMHRKVXM1NEpQRjJVcGpOOA?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260816-011",
       "tracks": [
         "存储芯片"
       ],
@@ -227,8 +275,8 @@
       "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "强",
-      "coreFact": "SK海力士发布财报，半年营收暴增近800%，人均薪酬超68万，并警告明年将迎最严重存储荒。",
-      "marketInterpretation": "存储行业高景气持续，涨价预期强烈。",
+      "coreFact": "SK海力士发布财报，半年营收暴增近800%，并警告明年将迎最严重存储荒。",
+      "marketInterpretation": "存储行业高景气，涨价预期强化。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -240,46 +288,20 @@
       ]
     },
     {
-      "id": "evt-20260816-010",
-      "tracks": [
-        "存储芯片"
-      ],
-      "targets": "闪迪（SNDK）",
-      "eventTypes": [
-        "公司公告"
-      ],
-      "sentimentFactor": "盈利因子",
-      "impactDirection": "正面",
-      "impactHorizon": "短期",
-      "evidenceStrength": "强",
-      "coreFact": "闪迪发布长期业绩指引，存储芯片股逆势活跃，闪迪大涨9%，成交额首次第一。",
-      "marketInterpretation": "存储涨价周期下，闪迪业绩预期强劲。",
-      "rumorNote": "",
-      "publishTime": "2026-08-15",
-      "sources": [
-        {
-          "name": "东方财富",
-          "time": "2026-08-15",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5YS0JvNVpqeFhDT19IZ3lLaEFvVnIzZFlsYnd5aEh4MXFLVnRQNV9TTGpOX2JaRnFab2JZS1hJRktCNVJWVmhTRG9NMXFvZWtHU21hUmtXV0EwRjRJNGhvaQ?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20260816-011",
+      "id": "evt-20260816-012",
       "tracks": [
         "存储芯片"
       ],
       "targets": "苹果（AAPL）",
       "eventTypes": [
-        "政策监管",
-        "供应链变动"
+        "政策监管"
       ],
-      "sentimentFactor": "政策因子",
+      "sentimentFactor": "风险因子",
       "impactDirection": "负面",
       "impactHorizon": "短期",
       "evidenceStrength": "强",
-      "coreFact": "美国商务部长表示已告知苹果不希望其从中国采购存储芯片，苹果可能仍会继续采购。",
-      "marketInterpretation": "地缘政治风险影响存储芯片供应链。",
+      "coreFact": "美国商务部长称已告知苹果不希望其从中国采购存储芯片，苹果或面临供应链调整。",
+      "marketInterpretation": "地缘政治风险加剧，存储芯片供应链不确定性增加。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -291,20 +313,45 @@
       ]
     },
     {
-      "id": "evt-20260816-012",
+      "id": "evt-20260816-013",
+      "tracks": [
+        "存储芯片"
+      ],
+      "targets": "闪迪（SNDK）",
+      "eventTypes": [
+        "公司公告"
+      ],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "强",
+      "coreFact": "闪迪发布长期指引，存储芯片逆势活跃，股价周涨超35%。",
+      "marketInterpretation": "存储涨价周期持续，业绩预期上调。",
+      "rumorNote": "",
+      "publishTime": "2026-08-15",
+      "sources": [
+        {
+          "name": "东方财富",
+          "time": "2026-08-15",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5YS0JvNVpqeFhDT19IZ3lLaEFvVnIzZFlsYnd5aEh4MXFLVnRQNV9TTGpOX2JaRnFab2JZS1hJRktCNVJWVmhTRG9NMXFvZWtHU21hUmtXV0EwRjRJNGhvaQ?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260816-014",
       "tracks": [
         "存储芯片"
       ],
       "targets": "三星电子、SK海力士",
       "eventTypes": [
-        "供应链变动"
+        "公司公告"
       ],
       "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
       "impactHorizon": "长期",
       "evidenceStrength": "强",
-      "coreFact": "韩国两大芯片巨头宣布五千亿级投资建厂计划。",
-      "marketInterpretation": "存储芯片产能扩张，满足未来AI需求。",
+      "coreFact": "韩国两大芯片巨头三星和SK海力士宣布建厂计划，投资规模达五千亿级。",
+      "marketInterpretation": "存储产能扩张，满足未来需求。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -316,7 +363,7 @@
       ]
     },
     {
-      "id": "evt-20260816-013",
+      "id": "evt-20260816-015",
       "tracks": [
         "恒生科技"
       ],
@@ -325,13 +372,13 @@
         "政策监管"
       ],
       "sentimentFactor": "政策因子",
-      "impactDirection": "中性",
+      "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "强",
-      "coreFact": "恒生科技指数宣布重大改革，调整成分股，新一批权重股拟调入。",
-      "marketInterpretation": "指数优化将提升科技属性，影响成分股资金配置。",
+      "coreFact": "恒生科技指数调整规则，提升科技含量，告别纯市值筛选标准。",
+      "marketInterpretation": "指数优化，更精准反映科技行业。",
       "rumorNote": "",
-      "publishTime": "2026-08-15",
+      "publishTime": "2026-08-16",
       "sources": [
         {
           "name": "财联社",
@@ -341,7 +388,7 @@
       ]
     },
     {
-      "id": "evt-20260816-014",
+      "id": "evt-20260816-016",
       "tracks": [
         "恒生科技"
       ],
@@ -353,8 +400,8 @@
       "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "腾讯单季砸下528亿元豪赌AI，显示大厂对AI投入力度加大。",
-      "marketInterpretation": "AI投入或提升长期竞争力，但短期影响盈利。",
+      "coreFact": "腾讯单季砸下528亿元豪赌AI，加大算力投入。",
+      "marketInterpretation": "AI投入加大，利好算力产业链。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -366,7 +413,7 @@
       ]
     },
     {
-      "id": "evt-20260816-015",
+      "id": "evt-20260816-017",
       "tracks": [
         "恒生科技"
       ],
@@ -378,8 +425,8 @@
       "impactDirection": "负面",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "港股科技股普跌，京东大跌超10%，拖累恒生科技指数。",
-      "marketInterpretation": "市场对科技股估值担忧加剧。",
+      "coreFact": "港股京东大跌超10%，拖累恒生科技指数。",
+      "marketInterpretation": "市场对京东业绩或竞争担忧。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -391,7 +438,7 @@
       ]
     },
     {
-      "id": "evt-20260816-016",
+      "id": "evt-20260816-018",
       "tracks": [
         "美股市场"
       ],
@@ -400,11 +447,11 @@
         "行业数据"
       ],
       "sentimentFactor": "流动性因子",
-      "impactDirection": "负面",
+      "impactDirection": "中性",
       "impactHorizon": "短期",
       "evidenceStrength": "强",
       "coreFact": "美股三大指数集体收跌，存储、光通信股大涨，闪迪涨超7%，应用材料跌超5%。",
-      "marketInterpretation": "市场分化，资金聚焦存储和光通信。",
+      "marketInterpretation": "板块分化，资金轮动。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -416,7 +463,7 @@
       ]
     },
     {
-      "id": "evt-20260816-017",
+      "id": "evt-20260816-019",
       "tracks": [
         "美股市场"
       ],
@@ -429,7 +476,7 @@
       "impactHorizon": "短期",
       "evidenceStrength": "强",
       "coreFact": "英伟达财报出炉，科技巨头全线走高，SpaceX启动IPO。",
-      "marketInterpretation": "英伟达业绩超预期，提振市场信心。",
+      "marketInterpretation": "财报超预期，提振市场情绪。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -441,11 +488,11 @@
       ]
     },
     {
-      "id": "evt-20260816-018",
+      "id": "evt-20260816-020",
       "tracks": [
         "美股市场"
       ],
-      "targets": "高毅资产、景林资产",
+      "targets": "高毅、景林、高瓴",
       "eventTypes": [
         "机构观点"
       ],
@@ -453,8 +500,8 @@
       "impactDirection": "中性",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "高毅、景林美股调仓曝光，高毅加仓存储龙头，景林清仓英伟达。",
-      "marketInterpretation": "机构对存储和AI芯片看法分化。",
+      "coreFact": "高毅、景林美股调仓曝光，高毅加仓存储龙头，景林清仓英伟达，高瓴买入。",
+      "marketInterpretation": "机构调仓分歧，存储受青睐。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -466,7 +513,32 @@
       ]
     },
     {
-      "id": "evt-20260816-019",
+      "id": "evt-20260816-021",
+      "tracks": [
+        "美股市场"
+      ],
+      "targets": "美联储",
+      "eventTypes": [
+        "政策监管"
+      ],
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "负面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "强",
+      "coreFact": "美联储转鹰，市场预期9月不加息概率降低，美股承压。",
+      "marketInterpretation": "加息预期升温，压制估值。",
+      "rumorNote": "",
+      "publishTime": "2026-08-15",
+      "sources": [
+        {
+          "name": "财联社",
+          "time": "2026-08-15",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE81MzB6ZEQ2OFlaOGpwX3hjU09GRDFROENZSHVJQmNfRGlBNGtpVW40cG0tM3Q3Q2FIdENHMFhzLW05Z1lPQ1hpWA?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260816-022",
       "tracks": [
         "美股市场"
       ],
@@ -478,8 +550,8 @@
       "impactDirection": "中性",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "摩根士丹利表示资金正从芯片股轮动至AI云服务商，美股短期或难再创新高。",
-      "marketInterpretation": "市场风格可能切换。",
+      "coreFact": "摩根士丹利称资金正从芯片股轮动至AI云服务商，美股短期或难再创新高。",
+      "marketInterpretation": "板块轮动，AI云受益。",
       "rumorNote": "",
       "publishTime": "2026-08-15",
       "sources": [
@@ -496,7 +568,7 @@
       "id": "rum-20260816-001",
       "track": "存储芯片",
       "content": "SK集团崔泰源警告2027年存储芯片供应缺口最大，内存硬盘或持续涨价。",
-      "heat": "高",
+      "heat": "中",
       "platform": "知乎热榜",
       "time": "2026-08-16",
       "url": "https://www.zhihu.com/question/2071746265390506374"
@@ -504,7 +576,7 @@
     {
       "id": "rum-20260816-002",
       "track": "恒生科技",
-      "content": "王祖贤现身广州网易总部，引发市场关注。",
+      "content": "王祖贤现身广州网易总部，引发市场对网易合作猜测。",
       "heat": "高",
       "platform": "头条热榜",
       "time": "2026-08-16",
