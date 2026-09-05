@@ -1,8 +1,8 @@
 {
   "meta": {
-    "dataCutoff": "2026-09-05 09:20（中国标准时间）",
+    "dataCutoff": "2026-09-05 13:46（中国标准时间）",
     "timeWindow": "过去24小时",
-    "generatedAt": "2026-09-05T09:20:20.506701+08:00"
+    "generatedAt": "2026-09-05T13:46:33.546234+08:00"
   },
   "events": [
     {
@@ -19,14 +19,14 @@
       "impactHorizon": "中期",
       "evidenceStrength": "强",
       "coreFact": "SEMI报告显示，2026年第二季度全球半导体设备出货金额同比增长23%。",
-      "marketInterpretation": "行业景气度持续，设备需求强劲。",
+      "marketInterpretation": "行业景气度持续，设备需求旺盛。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
         {
-          "name": "新浪财经",
+          "name": "ecar.semi.org.cn",
           "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1LdjJ4czY3bjRrb1h0eTllcjNWRXpTbDBTZXN4THpZSmktaTNHYVh0VXNueGlsMjNCYzFjTmU0elNCcTMyUXpMRWVfajNGVWpGQk5xa3pYMlJNZFBDVTlGdmwwUTBINmpRdGFuYUVwU3lJazJNQjVyU0I0VEg?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPbXF3UUJlM3dpbHN1MFFmOG8xVXhuS2FVTmJZdDdGdFRXdWUxSDh6NTRYU2pnS0hRaEpTVVI2S0tmc1pzdWNCdTdJUDdkRDd2Q0lZNGE5Wjh6ck0wVzlBVklCSi1rTi1RNGpjMV9Cd2dsX2I2V0F6OE1HOXRlU19KbWhQNW9lQQ?oc=5"
         }
       ]
     },
@@ -35,16 +35,16 @@
       "tracks": [
         "半导体设备"
       ],
-      "targets": "台积电（TSM）",
+      "targets": "台积电",
       "eventTypes": [
         "公司公告"
       ],
       "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
       "impactHorizon": "长期",
-      "evidenceStrength": "强",
+      "evidenceStrength": "中",
       "coreFact": "台积电全球在建晶圆工厂接近20座，设备采购预估值翻倍。",
-      "marketInterpretation": "扩产利好设备供应链。",
+      "marketInterpretation": "设备需求有望持续增长。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
@@ -66,10 +66,10 @@
       ],
       "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
-      "impactHorizon": "长期",
-      "evidenceStrength": "强",
+      "impactHorizon": "中期",
+      "evidenceStrength": "中",
       "coreFact": "SEMI预测2028年晶圆厂前段设备投资上看2200亿美元。",
-      "marketInterpretation": "长期资本开支上行。",
+      "marketInterpretation": "长期需求向好。",
       "rumorNote": "",
       "publishTime": "2026-09-05",
       "sources": [
@@ -87,13 +87,13 @@
       ],
       "targets": "行业整体",
       "eventTypes": [
-        "供应链变动"
+        "行业数据"
       ],
-      "sentimentFactor": "政策因子",
-      "impactDirection": "中性",
-      "impactHorizon": "中期",
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "CSEAC2026展会释放产业信号，半导体设备ETF易方达获超1亿份净申购。",
+      "coreFact": "半导体设备ETF易方达（159558）获超1亿份净申购。",
       "marketInterpretation": "资金关注度提升。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
@@ -114,19 +114,19 @@
       "eventTypes": [
         "技术进展"
       ],
-      "sentimentFactor": "政策因子",
+      "sentimentFactor": "盈利因子",
       "impactDirection": "中性",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "供应链重构进行时，半导体设备业面临“乌卡时代”突围。",
-      "marketInterpretation": "行业转型加速。",
+      "coreFact": "AI与半导体设备双向奔赴，设备商从“卖设备”转向“卖能力”。",
+      "marketInterpretation": "行业模式转型。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
         {
-          "name": "集微网",
+          "name": "时代在线",
           "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE95cHB6RnlGWmlpSWU4MHJ3eVlIT1JHTEZVZ3Iwek0yVnhHUHNMbjdCaVVWZ0piZk5wd2gyekNFSHNxTUE?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1nS2EybHVSNVFFaEl0Tlpiblc5dWhOVVlRdkp1TDhNUXlsZTktN2VzYy1pd214NG1sQkQ3eExBZjZmUDFUUW5hZ0o4aw?oc=5"
         }
       ]
     },
@@ -135,41 +135,16 @@
       "tracks": [
         "CPO"
       ],
-      "targets": "行业整体",
-      "eventTypes": [
-        "技术进展"
-      ],
-      "sentimentFactor": "政策因子",
-      "impactDirection": "正面",
-      "impactHorizon": "中期",
-      "evidenceStrength": "中",
-      "coreFact": "CPO先进测试战线前移，设备链组队抢进。",
-      "marketInterpretation": "CPO产业化进程加速。",
-      "rumorNote": "",
-      "publishTime": "2026-09-04",
-      "sources": [
-        {
-          "name": "新浪财经",
-          "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5uYnBZV3h2R0FKNnNoTm9xbjdaTXB6SU9oVFc4dXl4NEdPZDNXQURiX1Zya1NhTF8wbmFYaENTZEpFRk0tRmNac1FwVUtqOFJSSE5pcG9sV1JuaXZwNlBRN0ZVWC1vb05MVTlJbUF5M2dadUZoMWFaLTFrUjNPVjA?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20260905-007",
-      "tracks": [
-        "CPO"
-      ],
-      "targets": "中石科技（300684）",
+      "targets": "中石科技",
       "eventTypes": [
         "公司公告"
       ],
-      "sentimentFactor": "政策因子",
+      "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
       "coreFact": "中石科技推进高性能TIM、一体式VC及液冷产品在CPO/NPO架构下验证与应用。",
-      "marketInterpretation": "公司布局CPO散热领域。",
+      "marketInterpretation": "布局CPO散热领域。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
@@ -181,7 +156,7 @@
       ]
     },
     {
-      "id": "evt-20260905-008",
+      "id": "evt-20260905-007",
       "tracks": [
         "CPO"
       ],
@@ -189,12 +164,12 @@
       "eventTypes": [
         "技术进展"
       ],
-      "sentimentFactor": "政策因子",
+      "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
       "coreFact": "光安伦发布三款激光器新品，补齐下一代AI数据中心光互联关键拼图。",
-      "marketInterpretation": "新品有望提升竞争力。",
+      "marketInterpretation": "产品线扩展。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
@@ -206,27 +181,52 @@
       ]
     },
     {
-      "id": "evt-20260905-009",
+      "id": "evt-20260905-008",
       "tracks": [
         "CPO"
       ],
-      "targets": "奥芯明亮",
+      "targets": "剑桥科技",
       "eventTypes": [
-        "技术进展"
+        "机构观点"
       ],
-      "sentimentFactor": "政策因子",
+      "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
-      "impactHorizon": "中期",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "奥芯明亮相CIOE 2026，聚焦CPO规模化制造与光电异构集成。",
-      "marketInterpretation": "展示CPO制造能力。",
+      "coreFact": "华鑫证券维持剑桥科技“买入”评级，看好其光互联新技术布局。",
+      "marketInterpretation": "机构看好。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
         {
-          "name": "电子工程专辑",
+          "name": "Sohu",
           "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBLRUdrTV9Fem1xakYtMXExVFBMcHVMaXA2RGJPNHFjcU5aa1A3YVJtZWZteWZzcDdvSmxId21kSU9EVEI1eDFyVmNjYlBOTFFMWFRB?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRm5GLWQ4eXp2WFo2T1RrTXhCZEFKZ3lYODJTcGFzTkZNVFZGbDdpTlc5S1QxMXVRTXRRN1lMa0FoOS1odVU3UVczbWRYX2oxS0hPZkhDaGpFYThoeXJDYnhLX1BDeDVRZW9fWVA3QTJhNER5WHVGQldVejZIMWpKZWlaTU9JRlh2X1Y5Mw?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260905-009",
+      "tracks": [
+        "CPO"
+      ],
+      "targets": "天准科技",
+      "eventTypes": [
+        "机构观点"
+      ],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "中",
+      "coreFact": "中邮证券给予天准科技买入评级。",
+      "marketInterpretation": "机构看好。",
+      "rumorNote": "",
+      "publishTime": "2026-09-04",
+      "sources": [
+        {
+          "name": "同花顺",
+          "time": "2026-09-04",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xU3hRYlp1RTJYUnM5S2lCajNSSmRnQjFnTWp2OEZwVlJFS2trcXYtVXAtSHpwaHFiYVZhRGpJWElpVmFBb1o5ZElaeWlJZnNQLV9EWk56Q1RfTF8yeE84UUpR?oc=5"
         }
       ]
     },
@@ -235,41 +235,16 @@
       "tracks": [
         "国产算力"
       ],
-      "targets": "华为、百度",
-      "eventTypes": [
-        "技术进展"
-      ],
-      "sentimentFactor": "政策因子",
-      "impactDirection": "正面",
-      "impactHorizon": "中期",
-      "evidenceStrength": "中",
-      "coreFact": "华为、百度联手亮出国产AI训练芯片，英伟达紧急回应。",
-      "marketInterpretation": "国产AI芯片竞争格局或生变。",
-      "rumorNote": "",
-      "publishTime": "2026-09-04",
-      "sources": [
-        {
-          "name": "体坛加",
-          "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4xQjBNQUVralBSckxIcFV0MWdMUUotQjhmMmIyTkxWOERhZ3ZoV3Q4NGJCRXNOc2cwcUI5UUpETXoyWUg5bFd4NmlMMlVnY05uSUEwMWpneVlLdw?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20260905-011",
-      "tracks": [
-        "国产算力"
-      ],
       "targets": "趋境科技、摩尔线程",
       "eventTypes": [
         "供应链变动"
       ],
-      "sentimentFactor": "政策因子",
+      "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "趋境科技与摩尔线程达成战略合作，国产异构方案性价比超越国际先进算力。",
-      "marketInterpretation": "国产算力生态合作深化。",
+      "coreFact": "趋境科技与摩尔线程达成战略合作，国产PD异构方案进入生产环境。",
+      "marketInterpretation": "国产算力方案性价比提升。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
@@ -281,7 +256,7 @@
       ]
     },
     {
-      "id": "evt-20260905-012",
+      "id": "evt-20260905-011",
       "tracks": [
         "国产算力"
       ],
@@ -293,8 +268,8 @@
       "impactDirection": "中性",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "燧原科技IPO，拟募资61亿元。",
-      "marketInterpretation": "国产AI芯片公司融资加速。",
+      "coreFact": "燧原科技启动IPO，拟募资61亿元。",
+      "marketInterpretation": "国产算力公司资本化加速。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
@@ -306,27 +281,52 @@
       ]
     },
     {
-      "id": "evt-20260905-013",
+      "id": "evt-20260905-012",
       "tracks": [
         "国产算力"
       ],
-      "targets": "黑芝麻智能、遨博智能",
+      "targets": "创业板算力ETF天弘",
       "eventTypes": [
-        "供应链变动"
+        "行业数据"
       ],
-      "sentimentFactor": "政策因子",
+      "sentimentFactor": "流动性因子",
       "impactDirection": "正面",
-      "impactHorizon": "中期",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "黑芝麻智能与遨博智能完成首批产品交付，国产算力赋能机器人规模化落地。",
-      "marketInterpretation": "国产算力应用场景拓展。",
+      "coreFact": "首批8只创业板算力基础设施ETF开售，创业板算力ETF天弘一日结束募集。",
+      "marketInterpretation": "资金追捧算力赛道。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
         {
-          "name": "prnasia.com",
+          "name": "界面新闻",
           "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBEaGNiZHlLbTYwNG1GQ2Q5dEo2cjc5alRzQjV4U1FMQkdRQ0IyTmFNVWItN3lKa2lyUHcyR0dRNk5yLTJxc1J0dnM2b0JxRzEtUmpnMDlSNA?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE90Umo4QlFDNXVwS2VwLXZaUmo5RU9jYUVNTkdmSVZWOHhScXBiQnBMTkdIZFFPOGVrVjlDQnpucHZVd0VOeE5rM3QwanhfWlAzejZ1OWYzNVQ?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260905-013",
+      "tracks": [
+        "国产算力"
+      ],
+      "targets": "海光信息、华锐",
+      "eventTypes": [
+        "技术进展"
+      ],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "中期",
+      "evidenceStrength": "中",
+      "coreFact": "海光携手华锐发布五款高性能信创一体机，深入证券关键场景。",
+      "marketInterpretation": "国产算力在金融领域落地。",
+      "rumorNote": "",
+      "publishTime": "2026-09-04",
+      "sources": [
+        {
+          "name": "icloudnews.net",
+          "time": "2026-09-04",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9UblpVRWJOREZMZ2JuUlpDWFcxMDlvMlNhajV2UG1tOEVNRWoydGNCSVBRQWVnVUZ2WktNN3BfOVhBNktvRDl0S0RtbEhVRHZxWWc?oc=5"
         }
       ]
     },
@@ -343,14 +343,14 @@
       "impactDirection": "正面",
       "impactHorizon": "长期",
       "evidenceStrength": "强",
-      "coreFact": "韩国两大芯片巨头（三星、SK海力士）官宣建厂计划，投资达五千亿级。",
-      "marketInterpretation": "存储产能扩张，利好设备材料。",
+      "coreFact": "韩国两大芯片巨头三星和SK海力士官宣建厂计划，投资规模达五千亿级。",
+      "marketInterpretation": "存储产能扩张，设备需求增加。",
       "rumorNote": "",
-      "publishTime": "2026-09-04",
+      "publishTime": "2026-09-05",
       "sources": [
         {
           "name": "财联社",
-          "time": "2026-09-04",
+          "time": "2026-09-05",
           "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5"
         }
       ]
@@ -360,7 +360,7 @@
       "tracks": [
         "存储芯片"
       ],
-      "targets": "美光科技（MU）",
+      "targets": "美光科技",
       "eventTypes": [
         "公司公告"
       ],
@@ -369,7 +369,7 @@
       "impactHorizon": "长期",
       "evidenceStrength": "强",
       "coreFact": "美光93亿美元扩建广岛项目动工，预计2028下半年出货HBM。",
-      "marketInterpretation": "HBM产能扩张，利好存储产业链。",
+      "marketInterpretation": "HBM产能扩张。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
@@ -385,23 +385,23 @@
       "tracks": [
         "存储芯片"
       ],
-      "targets": "美光科技（MU）",
+      "targets": "长鑫存储、腾讯",
       "eventTypes": [
-        "机构观点"
+        "供应链变动"
       ],
       "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "美光高管表示存储供需将比2026年更吃紧。",
-      "marketInterpretation": "存储行业景气度有望持续。",
+      "coreFact": "中国长鑫存储为腾讯供应价值200亿元人民币的DRAM。",
+      "marketInterpretation": "国产存储获得大客户订单。",
       "rumorNote": "",
       "publishTime": "2026-09-05",
       "sources": [
         {
-          "name": "新浪网",
+          "name": "朝鮮日報中文版",
           "time": "2026-09-05",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQYXB4RVp1ejdnbFhFZGVfMGcxbFFJaXEydkFVeUR6aXY0VmRHbjM4THZDdFUwMFZTRDJSRVZGcE1hbWRqZmMwa2JuT2szcllJYWxSSnBVU0hiVjlTcE5OazVUSkl6NDJyQU9lbXpiTGtYUVo0ZlVfSjlLRnpzTXVidlJuNA?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSWM4STlIR01xM1JvdjB0TEJNM0M1UXlBNXNsMEFTWlgwYUpsc3JaNkVEeUNFQlVDSmpna0lqNkYwdnp2V0E3a2xSdnlkdWtUZGluSE5wSG1DYWxlVnhRNGg4ZlJlQUs3eGxxVl95ZnJIQzB1THJNU3RjV00wODhESWd5a0p0TXl0QTVPT2pSNktjelltNjJ0czVpLXotYkEx?oc=5"
         }
       ]
     },
@@ -410,7 +410,7 @@
       "tracks": [
         "存储芯片"
       ],
-      "targets": "行业整体",
+      "targets": "闪迪",
       "eventTypes": [
         "行业数据"
       ],
@@ -418,15 +418,15 @@
       "impactDirection": "正面",
       "impactHorizon": "短期",
       "evidenceStrength": "强",
-      "coreFact": "美股存储芯片股集体走强，闪迪涨超5%，美光涨超6%。",
-      "marketInterpretation": "存储板块受AI需求驱动。",
+      "coreFact": "美股存储芯片股集体走强，闪迪暴涨12%。",
+      "marketInterpretation": "存储行业景气。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
         {
-          "name": "东方财富",
+          "name": "华尔街见闻",
           "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE56dXlXUmhsNENZa05YdUU4RHY1WXlGMExZbUczUzNJMzVkN0ZES2ZtZF80MnhvQXpaMDlDbExVQ1ZXaU1FMUlsS3N0NnBEMDM5VTNocndocmJIM2dfaGJ3dVhENA?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9UN3pYZnFpeHpQR3E3bGZPSkRzNm1MNDh5WjVHTzNSemplQ0txNlUzRXpRb29oV1hGV25DV3BPaGswMkEybnpReF9mRDVlY01weXdr?oc=5"
         }
       ]
     },
@@ -435,23 +435,23 @@
       "tracks": [
         "存储芯片"
       ],
-      "targets": "行业整体",
+      "targets": "美光科技",
       "eventTypes": [
-        "技术进展"
+        "机构观点"
       ],
-      "sentimentFactor": "政策因子",
-      "impactDirection": "中性",
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "三大存储厂打响“散热”攻关战，热管理成下一代HBM核心竞争力。",
-      "marketInterpretation": "HBM散热技术成为焦点。",
+      "coreFact": "美光高管表示存储供需将比2026年更吃紧。",
+      "marketInterpretation": "存储价格有望上涨。",
       "rumorNote": "",
-      "publishTime": "2026-09-04",
+      "publishTime": "2026-09-05",
       "sources": [
         {
-          "name": "财联社",
-          "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5tOEQxWXJ2MlJMMHAyRUZuUUtkQjhDeHFtQngyS3VmY29DNi1senlkUUZYZHlzUVExa2FzWnYxdGNiYzM5SkdRYg?oc=5"
+          "name": "新浪网",
+          "time": "2026-09-05",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQYXB4RVp1ejdnbFhFZGVfMGcxbFFJaXEydkFVeUR6aXY0VmRHbjM4THZDdFUwMFZTRDJSRVZGcE1hbWRqZmMwa2JuT2szcllJYWxSSU5rVjlTcE5OazVUSkl6NDJyQU9lbXpiTGtYUVo0ZlVfSjlLRnpzTXVidlJuNA?oc=5"
         }
       ]
     },
@@ -469,7 +469,7 @@
       "impactHorizon": "短期",
       "evidenceStrength": "强",
       "coreFact": "9月4日港股收盘，恒生科技指数涨2.27%。",
-      "marketInterpretation": "科技板块反弹。",
+      "marketInterpretation": "科技股反弹。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
@@ -485,23 +485,23 @@
       "tracks": [
         "恒生科技"
       ],
-      "targets": "恒生科技指数",
+      "targets": "月之暗面",
       "eventTypes": [
-        "行业数据"
+        "公司公告"
       ],
-      "sentimentFactor": "流动性因子",
-      "impactDirection": "正面",
-      "impactHorizon": "短期",
-      "evidenceStrength": "强",
-      "coreFact": "港股科技互联网板块走强，恒生科技指数早盘涨超2%。",
-      "marketInterpretation": "市场情绪回暖。",
+      "sentimentFactor": "政策因子",
+      "impactDirection": "中性",
+      "impactHorizon": "中期",
+      "evidenceStrength": "中",
+      "coreFact": "月之暗面启动港股IPO。",
+      "marketInterpretation": "AI公司赴港上市。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
         {
-          "name": "财联社",
+          "name": "界面新闻",
           "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFAzZGRUTFVtTHNIQy1yek50RFE0M1RTdS1zdl9CZnNhZzA0N1ktR0xpcDgzbm5jbW5zVEtYcWVzY0lUWU14WWRLbg?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBjYVd4THRIaUJMRFZrMl9HMjNPcDF6LUY3a2ZkdWxwVGFvRW9fRFp3UWRxa2d4MFhaUC16TVI2M2ZNNTRpUzlVVE9fdTkzWjFMTGdTNjRhQlo?oc=5"
         }
       ]
     },
@@ -510,23 +510,23 @@
       "tracks": [
         "恒生科技"
       ],
-      "targets": "恒生科技指数",
+      "targets": "阿里巴巴、腾讯",
       "eventTypes": [
         "行业数据"
       ],
       "sentimentFactor": "流动性因子",
       "impactDirection": "正面",
       "impactHorizon": "短期",
-      "evidenceStrength": "强",
-      "coreFact": "港股全线走强，恒指系列成分股扩容拓宽市场投资空间。",
-      "marketInterpretation": "指数调整带来资金关注。",
+      "evidenceStrength": "中",
+      "coreFact": "阿里、腾讯的空头都在撤退，港股市场或见底。",
+      "marketInterpretation": "空头回补。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
         {
-          "name": "Sohu",
+          "name": "hstong.com",
           "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSG9VNmxoTWc4NGlSQ2V6QkI0Sjd4TDVsVHQ3a3JYZVRGQ05IbEd1NWwwSWlBWm54SFlySEtqZ1BRZFhWMjJDWkRaSk1qemIwcm94NE1fYjltU3dzTl9USkhnbGJLUjMxM1Z5aTlsWExXQjNjazBYRlZMQWc5czk1OVN4WHZvdXdh?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5USTEzZVJQVXdhVm5BU21Cdi1uMlJxN1BqXzF2b0FSd0hjUVF3OWVaZldURk9xTU5WZGZKYVNmSEN6dkFjbGRQbjkyRXR2MGcyU3lPZmFicWhhbmJ1cGJWcXBB?oc=5"
         }
       ]
     },
@@ -543,15 +543,15 @@
       "impactDirection": "负面",
       "impactHorizon": "短期",
       "evidenceStrength": "强",
-      "coreFact": "美股三大指数收跌，道指跌0.51%，标普500跌0.37%，纳指跌0.68%。",
-      "marketInterpretation": "非农数据超预期引发加息担忧。",
+      "coreFact": "美股三大指数收跌，非农数据压制市场情绪。",
+      "marketInterpretation": "就业数据引发加息担忧。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
         {
-          "name": "东方财富",
+          "name": "凤凰网财经",
           "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1tRlk0R1d1SWdkLUJQeno0R2tseERaN09RdkpHd1E4aHljRnVIdVpvd0U3UGxUdWxWU281WXMxUnBqYzB4UUd6bDJfcS1lSEdpaFpUMDdXS0dySEUzNWo1RFhfTFlJQQ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uelJMdkswc1RGU0F5LTV6WnNOUjl3S2llR2lhUlM3R29WZkwxOXVOdlJJVGRGck1PRm95dkpLekJzS3BIbEFwSHlKNk53Y19r?oc=5"
         }
       ]
     },
@@ -560,32 +560,7 @@
       "tracks": [
         "美股市场"
       ],
-      "targets": "行业整体",
-      "eventTypes": [
-        "行业数据"
-      ],
-      "sentimentFactor": "盈利因子",
-      "impactDirection": "正面",
-      "impactHorizon": "短期",
-      "evidenceStrength": "强",
-      "coreFact": "美股存储、光通信等AI概念股逆势爆发，半导体指数涨超3%，闪迪暴涨12%。",
-      "marketInterpretation": "AI硬件需求强劲。",
-      "rumorNote": "",
-      "publishTime": "2026-09-04",
-      "sources": [
-        {
-          "name": "华尔街见闻",
-          "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9UN3pYZnFpeHpQR3E3bGZPSkRzNm1MNDh5WjVHTzNSemplQ0txNlUzRXpRb29oV1hGV25DV3BPaGswMkEybnpReF9mRDVlY01weXdr?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20260905-024",
-      "tracks": [
-        "美股市场"
-      ],
-      "targets": "行业整体",
+      "targets": "高盛、巴克莱",
       "eventTypes": [
         "机构观点"
       ],
@@ -594,7 +569,7 @@
       "impactHorizon": "短期",
       "evidenceStrength": "中",
       "coreFact": "高盛、巴克莱警告美股急跌风险仍存。",
-      "marketInterpretation": "机构对后市谨慎。",
+      "marketInterpretation": "机构提示风险。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
@@ -606,27 +581,52 @@
       ]
     },
     {
-      "id": "evt-20260905-025",
+      "id": "evt-20260905-024",
       "tracks": [
         "美股市场"
       ],
-      "targets": "Bloom Energy",
+      "targets": "英伟达",
       "eventTypes": [
-        "公司公告"
+        "行业数据"
       ],
-      "sentimentFactor": "政策因子",
+      "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
-      "impactHorizon": "中期",
-      "evidenceStrength": "强",
-      "coreFact": "Bloom Energy入选标普500成分股。",
-      "marketInterpretation": "公司地位提升。",
+      "impactHorizon": "短期",
+      "evidenceStrength": "中",
+      "coreFact": "追踪美股七巨头的ETF逼近历史峰值，英伟达重掌“铁王座”。",
+      "marketInterpretation": "科技股强势。",
       "rumorNote": "",
       "publishTime": "2026-09-04",
       "sources": [
         {
           "name": "东方财富",
           "time": "2026-09-04",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE11MEdNbnZZZURXMnlOOS1XbEo0Y0dTN05VT0NRektHd1dmNkpzZVFDcFNrMU9RZFAydnRLXy1RYzdiY2VfOTNXdE9XcU9nS2tPR3BESmdqdzBNTzZDQWpKMQ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ZaGNsaVBRalRKLUlidDZxRzFmMVVaa2ZLU3laME91WVJ5VDRKMDJLWGpRRHRWYWd4Q0pEV3JHMlpJbVh5eGM0eDU4YUpXcFRSS3l5TmcyVlctbjlWUjEyaw?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20260905-025",
+      "tracks": [
+        "美股市场"
+      ],
+      "targets": "微软",
+      "eventTypes": [
+        "行业数据"
+      ],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "中",
+      "coreFact": "美股盘前微软涨超9%。",
+      "marketInterpretation": "市场情绪积极。",
+      "rumorNote": "",
+      "publishTime": "2026-09-05",
+      "sources": [
+        {
+          "name": "TradingKey",
+          "time": "2026-09-05",
+          "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPS2pDamlNSDVyZmNsSUtpdUoyWE1CQkx3UGtmMTJiQTdBV2NIODBnWGd2WXF3T0R2VW51XzM4OHhEbzM4dXprTVZ2eDFjMjV2Y3BOcVdnRWwzdEdkVTlsVTVJTkF5a2d3UWhBSTZBTzJ4N01IYUJGZldYTWRicXdIT2NmbVFVNTRDZVdqbzRTUXh0aGZrcXNHelFsMGVVaTNXcU1lV3FLZVByVlVNbV9MbEpmdzRwYnNwZ2VfRHEwZUJTdDdBUkxHTW9xNnNWU2tuWkJuNDRER3k?oc=5"
         }
       ]
     }
