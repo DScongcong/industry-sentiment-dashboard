@@ -1,8 +1,8 @@
 {
   "meta": {
-    "dataCutoff": "2026-10-28 14:52（中国标准时间）",
+    "dataCutoff": "2026-10-29 09:20（中国标准时间）",
     "timeWindow": "过去24小时",
-    "generatedAt": "2026-10-28T14:52:17.340886+08:00"
+    "generatedAt": "2026-10-29T09:20:13.305660+08:00"
   },
   "events": [
     {
@@ -10,23 +10,23 @@
       "tracks": [
         "半导体设备"
       ],
-      "targets": "中微公司（688012）、北方华创（002371）、拓荆科技（688072）",
+      "targets": "行业整体",
       "eventTypes": [
-        "行业数据"
+        "机构观点"
       ],
-      "sentimentFactor": "流动性因子",
+      "sentimentFactor": "待验证",
       "impactDirection": "待观察",
-      "impactHorizon": "短期",
+      "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "10月27日半导体设备ETF华夏份额减少8400万份，最新份额86.45亿份，规模58.62亿元，重仓股含中微公司、北方华创、拓荆科技。",
-      "marketInterpretation": "公募三季度减配电子居首，半导体设备拥挤度回落至中位。",
+      "coreFact": "杰富瑞发布观点称半导体设备行情将持续至2028年，认为此前利空被过度放大。",
+      "marketInterpretation": "机构认为设备景气周期长于市场预期",
       "rumorNote": "",
-      "publishTime": "2026-10-27",
+      "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "证券之星",
-          "time": "2026-10-27",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5CWTZ3TEhNbjV4M3I1ZUFMLXJlclNkaHBUTVdLSW9IVkZteDVKcHBneUs3ZkppTHZVRzNJa1VnRXBJZGJ5TkRSWUNsdnNjcU5kM0xjdnZROTVDR0NtWlhlbXRB?oc=5"
+          "name": "财联社",
+          "time": "2026-10-28",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1tQ21fZG10RVlUM3A4d09ydEYzSFJIUHFVN2xVV2JOOGM3c3IwMzJOSFpUSnFXc3hSb3U1anQ4eGllQ2ZGUW1ONA?oc=5"
         }
       ]
     },
@@ -35,23 +35,23 @@
       "tracks": [
         "半导体设备"
       ],
-      "targets": "行业整体",
+      "targets": "英杰电气（300820）",
       "eventTypes": [
-        "行业数据"
+        "公司公告"
       ],
-      "sentimentFactor": "流动性因子",
-      "impactDirection": "待观察",
-      "impactHorizon": "短期",
+      "sentimentFactor": "待验证",
+      "impactDirection": "中性",
+      "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "10月27日科创半导体设备ETF鹏华（589020）份额减少2.72亿份，最新份额45.44亿份，规模36.13亿元。",
+      "coreFact": "英杰电气10月28日回应半导体设备话题，称MFC等核心部件仍处研发阶段。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "新浪财经",
+          "name": "证券之星",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTFJrQW12Rk4wclZkMTBVdTVkM2pJYjVZdVBDcEMyUWZ3bEY5cjlXVDJfNFJxSlFad1Z4aXdZSU1Za0JnYUJVeGEwSmV3Uy16QjhRYlV5NXpBODladHQzMUN1TlRUWExKc2JuWEhlYVFxTVRWSjFNb0pheHdxSzdoNHByZDlJYUJrREFyRUpHSWVPVzRNeEdmdHhXaw?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE8xbEFEMjUwNVpPaFp4aGFjd2hkbTFqRmNFbmgxVWU4YlRCTTJUcE1IeS15NXRvb1VZTklGY0I2RHhYM3BKcXd0RWtQOFZMRWNHWHRKd0JTby1NVTM3dTdZY0xB?oc=5"
         }
       ]
     },
@@ -60,23 +60,23 @@
       "tracks": [
         "半导体设备"
       ],
-      "targets": "中微公司（688012）",
+      "targets": "神州半导体",
       "eventTypes": [
         "公司公告"
       ],
       "sentimentFactor": "风险因子",
-      "impactDirection": "负面",
-      "impactHorizon": "短期",
+      "impactDirection": "待观察",
+      "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日中国半导体设备商中微公司股价一度下挫2%，创半年新低。",
+      "coreFact": "神州半导体科创板IPO问询回复披露，单一客户依赖中微公司被重点关注。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "TradingView",
+          "name": "凤凰网",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA0MXBtTVB1bEpleU4yT2dCclJDdDRyb0lXel9QSXd0ck55NncyLW96UklDeGF3b1hrNFpZU2ZkaEtBYWljdTNtblAzak0wQTFjb2x3cVA1Qm1na0l4VkhSVjlFVzRDSFJRdUFIMDc3U2RpR3VsZUFJ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9lUzBMdm0ydFV0ZE85bUpHaE04Ri1oNURaVXRJaVhEMUVuRWpHT3BQczFjdnpsTGxsdGtUX0FLNTRyUkNEUXE0TGc5OHRVSmtVN3c?oc=5"
         }
       ]
     },
@@ -85,23 +85,23 @@
       "tracks": [
         "半导体设备"
       ],
-      "targets": "行业整体",
+      "targets": "丰光精密（430510）",
       "eventTypes": [
-        "机构观点"
+        "公司公告"
       ],
       "sentimentFactor": "盈利因子",
-      "impactDirection": "待观察",
-      "impactHorizon": "中期",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日有研报指出半导体设备盈利短期承压，关注设备突破打开成长空间。",
-      "marketInterpretation": "三季报开启修复催化窗口。",
+      "coreFact": "丰光精密前三季度扭亏为盈，半导体设备用零部件销售收入增长。",
+      "marketInterpretation": "",
       "rumorNote": "",
-      "publishTime": "2026-10-28",
+      "publishTime": "2026-10-29",
       "sources": [
         {
-          "name": "证券之星",
-          "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE12aEZlUmpPQWxNU3NSX3RCRzdkSy1ScFZhalU0elFGektSeWNwcng2ak1hX2NDVTc0emFYVnBwRXVNOURfU3hBMjMzNklxLUxLV3BocGJwcFBIZXpaSVRkVHNR?oc=5"
+          "name": "搜狐网",
+          "time": "2026-10-29",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOeGJROW1VTTh0MGVoZkZVV1B1V2tKUWxFRy1GV2FFcmpnbC1VNFFvSXhPQ3dteTRyMnk2Q2lJOHRPbU16eGc1Z05BVVdnZm9GVDFrb1d5OWh5ZUROdVhFUXk3bktzRUxxUzN2TnFEdVQ2UC1HQ2Z6MnBQNmNfRW5Mb081MFJicUtUT2toZQ?oc=5"
         }
       ]
     },
@@ -110,23 +110,23 @@
       "tracks": [
         "CPO"
       ],
-      "targets": "天孚通信（300394）",
+      "targets": "英伟达（NVDA）",
       "eventTypes": [
-        "公司公告"
+        "技术进展"
       ],
       "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
+      "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "10月27日天孚通信回应CPO话题称，为CPO/NPO/高速光模块厂商提供无源有源产品及整体解决方案，CPO配套FAU、ELS等产品已具备较好基础。",
-      "marketInterpretation": "",
+      "coreFact": "英伟达官宣CPO光引擎产能将提高15倍。",
+      "marketInterpretation": "媒体称AI互连进入规模交付前夜",
       "rumorNote": "",
-      "publishTime": "2026-10-27",
+      "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "证券之星",
-          "time": "2026-10-27",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1uMUZxaExpMzhqeWZrUzFZTDUxTFNpaG45eHZSOTAtekhaV05WYU9OY21tMk1ZMjFJT0tpc0NfTURNdVlhaGxVVHdQS1o4YVIxcWp0czJfOExXRFBrZG1WbkFR?oc=5"
+          "name": "搜狐网",
+          "time": "2026-10-28",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUjRQMzY1MF9vYnVtWHpwS2NUcVFsdGVQSTF5c0M1emtCTXpsT3RrNnpmSW1qYXFxcXJPbjVoU3RMT1pvYmlmQ3JBbzUwTXpiREhCcEtRZnI5N0k3T3BMQkJRZ3AxbmdKX3dkSWI3R0NDa0dxOG5GdHY4Zm5SbWFXb1FNRWpJU0hZ?oc=5"
         }
       ]
     },
@@ -135,23 +135,23 @@
       "tracks": [
         "CPO"
       ],
-      "targets": "科威尔（688551）",
+      "targets": "天孚通信（300394）",
       "eventTypes": [
         "公司公告"
       ],
       "sentimentFactor": "待验证",
-      "impactDirection": "中性",
-      "impactHorizon": "短期",
+      "impactDirection": "正面",
+      "impactHorizon": "长期",
       "evidenceStrength": "中",
-      "coreFact": "10月27日科威尔在互动平台表示，公司目前暂无CPO电源测试相关布局。",
+      "coreFact": "天孚通信表示预计CPO产品自2027年起逐步提量，将成为新的增长驱动力。",
       "marketInterpretation": "",
       "rumorNote": "",
-      "publishTime": "2026-10-27",
+      "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "证券之星",
-          "time": "2026-10-27",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBzZlE3T08zZVBMSUJyYU8tZnhiaGZSM2VaUUgzM0VVWGxLYzVWdVRwb1hIU2d5SGRoMHo4UHVDcUZTa21uUHVXYk41YmF3SkJTa3pBazlkRFJweUVZb09BNWd3MV8?oc=5"
+          "name": "东方财富",
+          "time": "2026-10-28",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1MdnM3c0M1cExESUFDWTRQbE0ycm9hM18zWUlkTXQ1bTAzNzhrbENPMFJEbzJEOG1faG5rOWxnb2M0ZU13aGRuM1RaOS14MzBvTmtHODYzYVI2Ym1FMXFsNjdIUDZwUQ?oc=5"
         }
       ]
     },
@@ -160,23 +160,23 @@
       "tracks": [
         "CPO"
       ],
-      "targets": "行业整体",
+      "targets": "蘅东光",
       "eventTypes": [
-        "机构观点"
+        "技术进展"
       ],
-      "sentimentFactor": "盈利因子",
+      "sentimentFactor": "待验证",
       "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日有报道称高盛大幅上调全球光模块市场预期，CPO概念震荡反弹。",
+      "coreFact": "蘅东光盘中涨超10%，公司CPO无源光器件推进验证试产。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "搜狐网",
+          "name": "观点网",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQR0FiTmFKYm4zWHNxZTd2QktPN1JnMlZXTkgyS29KVlVJVm50aXdqSFNfQ2dRZHFMTG1uUGRlaV9yRlFIZzJkcTZCME1ubUlzTGZhOExtVXkyYmtFWHhSQUV1eHFOTWw2UjdPQldhcFR1dzUxWWZ5MDR0U0VHOWNZaThnQ1ZvN2k0QjNqMQ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBSYmdkTzg1MC1zZ3pOUHNLY2RWTGR1N1lFQlBzXzJEcldDMktjdXB1bEJtQmFNOVY0X0pZeVFYNy1La3J4VjBhcVFtYWJFcG5GWjFyQUg3Sk1XbllXYk4ybEpR?oc=5"
         }
       ]
     },
@@ -185,23 +185,23 @@
       "tracks": [
         "CPO"
       ],
-      "targets": "澜昆微电子（未上市）",
+      "targets": "中际旭创（300308）",
       "eventTypes": [
-        "技术进展"
+        "行业数据"
       ],
-      "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
-      "impactHorizon": "长期",
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日澜昆微电子完成数亿元融资，聚焦算力互连赛道。",
-      "marketInterpretation": "",
+      "coreFact": "10月28日CPO概念集体大涨，中际旭创涨超10%，创业板指收涨3.4%。",
+      "marketInterpretation": "媒体称接近底部特征",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "投资界",
+          "name": "东方财富",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5PQW9SS0sydE9TMzZ4V3JQNGN2X2ZfUl83S0oyWC1HeEk5ZEk5RUhsS3hTdEVyOHNBOFdhLU04MmVPLUE3c3NPMUNuZERJamJtSDAzNE5n?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5sRW9qNTZ6RkY2M29tbC1NMnFsRjZEQUFVWlhtc0poWG9VNldSVU9XWDA3UWZBZ01LamhsOXhOaG9xc181d3pzWHNOOHJJUHhhcS1KRDlIRVFFQmNlazlLZ0xSU1RoZw?oc=5"
         }
       ]
     },
@@ -210,23 +210,23 @@
       "tracks": [
         "国产算力"
       ],
-      "targets": "科大讯飞（002230）",
+      "targets": "中科曙光（603019）",
       "eventTypes": [
-        "技术进展"
+        "公司公告"
       ],
-      "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
-      "impactHorizon": "中期",
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月27日科大讯飞刘庆峰表示，讯飞星火X2.6采用全国产算力训练，并押注端侧模型。",
-      "marketInterpretation": "",
+      "coreFact": "中科曙光第三季度净利润同比增长217%。",
+      "marketInterpretation": "媒体称国产算力进入业绩兑现阶段",
       "rumorNote": "",
-      "publishTime": "2026-10-27",
+      "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "钛媒体",
-          "time": "2026-10-27",
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5UNnhOWG1ER09UbWExRjlzRnI5RnNiYURaamxQYWdPM1FIYnVEQW8zOExYcFhxSUVwamw1aU42QXVxVFk0OXgyNERJMVU?oc=5"
+          "name": "搜狐网",
+          "time": "2026-10-28",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdW1GbkMwZWhvdVdDdms3M3FkbjdlcEhQeUJ2RTVkTWZlazdUWER5cG0tLTZaaWR6SHA3clFZMDM5Sk8wTnluWkNlSHpBOW4tNkxrbnY4VjU2V2o3UmdLZ1ZYbFowNDJ3YWx0SmFhVkYtRC1ZOVg3dWUwZi1yYTJRZUNkdUMxcGdmaktqdA?oc=5"
         }
       ]
     },
@@ -241,67 +241,67 @@
       ],
       "sentimentFactor": "盈利因子",
       "impactDirection": "待观察",
-      "impactHorizon": "中期",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月27日报道称国产算力芯片双雄对比：海光营收领跑，寒武纪净利反超。",
+      "coreFact": "报道对比国产算力芯片两家企业业绩：海光营收领跑，寒武纪净利反超。",
       "marketInterpretation": "",
       "rumorNote": "",
-      "publishTime": "2026-10-27",
+      "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "新浪财经",
-          "time": "2026-10-27",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBzcnBwQl9ta3RXRk1mZ0hramhTVXRLbUsyT1hyZ2owbU9HbG9zNGd4N05YaEltdlRZVURacGFvQVl3SUhJWnotNm9pSFhNQTNJQTBGOVhoaVhVWFVGcDNMS0NZYjFWZXg3WGdBZmVQaHNSNi1STG9jeg?oc=5"
+          "name": "同花顺财经",
+          "time": "2026-10-28",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5lV0N3R2FGR1hXcmdNSGpvRjAzWC1UU0NBMFdvQ2dHTWVrVWFsSUEtNjM3OExfOERBTVVpV3pHTnZxME5DOU1WLUpobmdVVTROT1pGT2VGcjB5QnNBaXE3VmZ3?oc=5"
         }
       ]
     },
     {
       "id": "evt-20261028-011",
       "tracks": [
-        "存储芯片"
+        "国产算力"
       ],
-      "targets": "SK海力士（000660.KS）",
+      "targets": "科大讯飞（002230）",
       "eventTypes": [
-        "公司公告"
+        "机构观点"
       ],
-      "sentimentFactor": "盈利因子",
-      "impactDirection": "正面",
+      "sentimentFactor": "风险因子",
+      "impactDirection": "负面",
       "impactHorizon": "中期",
-      "evidenceStrength": "强",
-      "coreFact": "10月28日SK海力士公布三季度营业利润同比暴增7倍，并推出百万亿韩元股东回报计划，称存储芯片供应短缺持续至2030年。",
-      "marketInterpretation": "机构认为存储景气周期延续。",
+      "evidenceStrength": "中",
+      "coreFact": "科大讯飞刘庆峰表示，国产算力训练半年不及国际一个月，代价必须付。",
+      "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "华尔街见闻",
+          "name": "风闻",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5JT3Z1RVpqSlNwSWZrTk5jVEQ3SWZIbnJEbTJLLWl2UV90akRpRGRHVHduN25CeVlWRnFfalB0Zzk2RFhoVTdIN2RJSzVkcVp5SWhv?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1qVV9aTmNoUEZweThXYUlCTDdUQ2FqdXh3d0NiMzE1SzRoU1dvSUVGUVRJNXpLUXhUQVZpdUpva0FJT1htSzdNRFIzcGllWVN3UHJ2YkwtYnd4dVU?oc=5"
         }
       ]
     },
     {
       "id": "evt-20261028-012",
       "tracks": [
-        "存储芯片"
+        "国产算力"
       ],
       "targets": "行业整体",
       "eventTypes": [
-        "机构观点"
+        "行业数据"
       ],
       "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
-      "impactHorizon": "中期",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月27日大摩、花旗、野村密集看多存储，称存储荒持续，HBM价格或翻倍。",
+      "coreFact": "国产算力芯片企业三季度业绩亮眼，科创芯片设计ETF易方达标的指数涨近5%。",
       "marketInterpretation": "",
       "rumorNote": "",
-      "publishTime": "2026-10-27",
+      "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "东方财富",
-          "time": "2026-10-27",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBVTDRfVjA4Z0JCUjY3RThjZDN6OFlLN3VCbXFqRURQYlRUeDZ5QjAtX2lOYVZORzZvbEFfLVJ3Y0pCM1g0bFJwdkxVa0JiRHdpY0FwMzR0NkgyNVpPcnRrVQ?oc=5"
+          "name": "财联社",
+          "time": "2026-10-28",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9LX0hQUmlkUk42cmQ4VnVyUDZvRFE1V0Y4c0E4U01KRGF0a0wxRXk5TGstWWxvdDVvY0lOVlNGdXd2ckhheVh3NQ?oc=5"
         }
       ]
     },
@@ -310,23 +310,23 @@
       "tracks": [
         "存储芯片"
       ],
-      "targets": "三星电子（005930.KS）、SK海力士（000660.KS）",
+      "targets": "SK海力士",
       "eventTypes": [
-        "供应链变动"
+        "行业数据"
       ],
-      "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
-      "impactHorizon": "长期",
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月27日韩国两大芯片巨头官宣建厂计划，涉及五千亿级投资。",
+      "coreFact": "美股存储芯片股集体走强，SK海力士股价涨幅扩大至12%以上。",
       "marketInterpretation": "",
       "rumorNote": "",
-      "publishTime": "2026-10-27",
+      "publishTime": "2026-10-28",
       "sources": [
         {
           "name": "财联社",
-          "time": "2026-10-27",
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBlUlBkNVdaVGxNUG1fbEJ0YjhMYjZHZ3hleHY2aXI3MkRsNTNqVlZyWFJ6ZUMxcTBUT3Qyb3JRblZqTEdudzlWbQ?oc=5"
+          "time": "2026-10-28",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFB0SjJFQ3lyS3lHMlExaW02VE43VlZGYkp4QVdCSml6SEdGN3dsMzNCVzdNdnh4b0d1dWQ5YUJmVWpXX24tX2ZKYw?oc=5"
         }
       ]
     },
@@ -335,73 +335,73 @@
       "tracks": [
         "存储芯片"
       ],
-      "targets": "蓝思科技（300433）",
+      "targets": "三星电子",
       "eventTypes": [
         "公司公告"
       ],
-      "sentimentFactor": "风险因子",
-      "impactDirection": "负面",
+      "sentimentFactor": "待验证",
+      "impactDirection": "正面",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日报道称受存储芯片涨价致终端需求承压影响，蓝思科技前三季度净利遭腰斩。",
+      "coreFact": "三星电子表示第四季度存储芯片需求将继续扩大。",
       "marketInterpretation": "",
       "rumorNote": "",
-      "publishTime": "2026-10-28",
+      "publishTime": "2026-10-29",
       "sources": [
         {
-          "name": "搜狐网",
-          "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMDlydWNCQ2dLZkFWRUdOU21EQUxEcVNEYk4wUmVxdFpCZVROR3ROaWVmaGUyNWJpVGtCWVRkS0gyNHlQYnk1MG0wRjViWUw5cWg5dDh1cGhCT2ZrVzg5ODFIWlVWUk1mRGNYOUw5MmJGOTdrMVJHRG0zRGc5WUZ6SW80X2QwWkZH?oc=5"
+          "name": "金融界",
+          "time": "2026-10-29",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE81VFY4MUs1b1plYzVSOGFWbV9kTUJrR1Y5c01waVg3WUpoSHdFZ1Ftd2FScFZOQWpkNmV4bUxHU001bEZRZFA0VzF3aV9haDhacGpfemhaOXVRM1M3bWhwWGh3TF84ODJmenhIazc5cw?oc=5"
         }
       ]
     },
     {
       "id": "evt-20261028-015",
       "tracks": [
-        "恒生科技"
+        "存储芯片"
       ],
-      "targets": "恒生科技指数",
+      "targets": "君正股份",
       "eventTypes": [
-        "行业数据"
+        "公司公告"
       ],
-      "sentimentFactor": "流动性因子",
+      "sentimentFactor": "盈利因子",
       "impactDirection": "正面",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日港股午盘恒生科技指数涨1.8%，恒指涨0.43%，科网股普涨，存储概念股走强。",
+      "coreFact": "君正股份三季度净利润同比增长2595.49%，A股存储芯片概念拉升，其触及20CM涨停。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "新浪财经",
+          "name": "电子工程专辑",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQUTE3NWpBUktyT1lkMVZkTEhZbUZqS0pYa3RLaDRtMDY3Tk9lNlBSdFhzX3RTMUtxZENndmVoQlFTZy1UQnJmcm1WN2hfNjNvNEpNekFLWU81VDJWVktNWFU4WGQ0ajM4UWZjSEd5REt6WTdEN2ZFYU9scjYybXVjWGt1QjE4eUV0WXN0eE5yUGhacG1uNGZ4MTVIVVg5ZTRIdnRTdEZ4OF9yc2ZUQm56NzVydVFTNFcyTW5LcW1SVHJxS0xpeW5pSnoyb2dvcWZiSWNsOXFCS29OZ3FqSDFRa3lmbURKbFlINzJ5YQ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5qZG1qd3Q4eFpybjJETWE2LTVxY3VWelBpRWh6QXUzUGZHOTNmUVJOT3ZpLXByZjhRQ0VKcGJVNkk1SXBuQlN5M1V1TGN0eVpSam1F?oc=5"
         }
       ]
     },
     {
       "id": "evt-20261028-016",
       "tracks": [
-        "恒生科技"
+        "存储芯片"
       ],
-      "targets": "恒生科技指数",
+      "targets": "行业整体",
       "eventTypes": [
-        "行业数据"
+        "机构观点"
       ],
-      "sentimentFactor": "流动性因子",
+      "sentimentFactor": "待验证",
       "impactDirection": "正面",
-      "impactHorizon": "短期",
+      "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日恒生科技指数盘中涨超2%，报3876.540点，恒指涨0.503%。",
+      "coreFact": "有机构观点称存储供应紧张将持续至2027年，HBM价格明年翻倍。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "手机新浪网",
+          "name": "财联社",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5ySWhrMmY0NThjWlZrc3pGRVJhWDRyUWpUYXJyaVRVSzNkYWJFNHUzdHVwcjYzOTJNM3lHVnhBM2ExdnBEcUJUbGg5bw?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9zMzI1RDJtUzVKN05LdWtDaVB4ZlB6dXZqRG4xNXlNMlFpenpPbTZSOUpFODdSb0NrMFZyN2YwaFV3S05UTU42dg?oc=5"
         }
       ]
     },
@@ -410,23 +410,23 @@
       "tracks": [
         "恒生科技"
       ],
-      "targets": "恒生科技ETF南方（520570）、恒生科技ETF天弘（520920）",
+      "targets": "恒生科技指数",
       "eventTypes": [
         "行业数据"
       ],
       "sentimentFactor": "流动性因子",
-      "impactDirection": "待观察",
+      "impactDirection": "正面",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月27日恒生科技ETF南方份额增加100万份至38.12亿份，恒生科技ETF天弘份额增加900万份至196.40亿份。",
+      "coreFact": "10月28日港股收涨，恒生指数涨0.23%，恒生科技指数涨1.4%，光通信板块涨幅居前。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "新浪财经",
+          "name": "21财经",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPWi10WlBySHROaEg1VjBBazJid2pSWjU2c0RfTEp3SldVVUF4RFZKcGpMWkFwN012SU91LUlxRmNoQ3doUWl0V2s2bEhQVU9xTGlVSms4UFBPcVU4RHMyQ0tYMEdWM1EzbzRsUDJUMVltb2pTUUYtYmFrQjFTNzJqSUktY3RBMDdsVFNLZG9pU0U4RGIzNnZITmtWaw?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMDNOVEVPRmVHODVYc2NaM1IxY0xDMHhKUVV4UlVOS2RoWHhKQTRKVmhLNGpZWXhYRzlzbDdoWXpNUks3UGxpOUZXbmJaWFZjVTFmMFlEZG1SRVF1TnZGbmczMTFMbjlBVkYwMXg0V3FYeHRkWG9FdkxKR0RWUHg2YzVEa0VOaGtVMWh5c0F0SQ?oc=5"
         }
       ]
     },
@@ -435,32 +435,32 @@
       "tracks": [
         "恒生科技"
       ],
-      "targets": "行业整体",
+      "targets": "天弘恒生科技ETF",
       "eventTypes": [
-        "机构观点"
+        "行业数据"
       ],
-      "sentimentFactor": "待验证",
+      "sentimentFactor": "流动性因子",
       "impactDirection": "待观察",
-      "impactHorizon": "中期",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日有报道称Anthropic上市进入倒计时，史上最大IPO渐行渐近。",
+      "coreFact": "10月28日天弘恒生科技ETF基金份额减少600万份，重仓股含比亚迪股份、网易、腾讯控股。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "搜狐网",
+          "name": "证券之星",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTE5RYVJOZ04xa3I2UFRuYmpNLUYtV01fd3NtUFo1TlM1cmpkbDJERmNycEk0THpNeUhubm54UXRidHRIQnVCQVd4OXptTkpSdEFWZGR4UkxibkR0dnVoNFdxSUJHUXNwd0ZyVFJoRk1MdWlMNnQ4UWZpRENhUFUwNk92SFIzTXdUNjdQbng3a3labDRVaElBOWVFVS0yZWZydHl6eQ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9IVmtQWmpPdG8wYkI0QzVhRmpPRHJBYUczVGp2cXJ4TUNQQUxVT0ZsbWZIbmFvSWgyWUZkOXRpeUg4bTFXeHUybW5rNzJlMDhLRUdjMnlpdzNQTGJoRHBuTE13?oc=5"
         }
       ]
     },
     {
       "id": "evt-20261028-019",
       "tracks": [
-        "美股市场"
+        "恒生科技"
       ],
-      "targets": "纳斯达克指数、费城半导体指数",
+      "targets": "港股通标的",
       "eventTypes": [
         "行业数据"
       ],
@@ -468,15 +468,15 @@
       "impactDirection": "正面",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月27日美股三大指数集体收涨，纳指涨超1%，存储、光通信板块走强。",
+      "coreFact": "多只港股通标的获南向资金买入，业绩报喜公司受青睐。",
       "marketInterpretation": "",
       "rumorNote": "",
-      "publishTime": "2026-10-27",
+      "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "东方财富",
-          "time": "2026-10-27",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB6OXVfU0FLVVdwRUswUXdkc1FiZFZiMXM5eTJaWU44aGdCSnl1ZXF2UTVrYlFmdFExU3Z2UUR1X1Q0Ri1ZemloTEw2UEtrUWZOTVpEd3NPak8tRDRFcXAtcll2NA?oc=5"
+          "name": "Moomoo",
+          "time": "2026-10-28",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PazJINDdjN3BORTY3QmVUQUQ2OGxoTi1HVU50dVRnMmpzTERlZnFkYnhRWU9STnFlc3JVNmhFYlJlel9xZzRvREJuOU14bGRxelBmQllsNHJKaGRD?oc=5"
         }
       ]
     },
@@ -485,23 +485,23 @@
       "tracks": [
         "美股市场"
       ],
-      "targets": "英伟达（NVDA）、Meta（META）",
+      "targets": "美股三大指数",
       "eventTypes": [
-        "公司公告"
+        "政策监管"
       ],
-      "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
-      "impactHorizon": "中期",
-      "evidenceStrength": "中",
-      "coreFact": "10月28日财新报道英伟达向Meta投资30亿元，AI循环交易延伸至美股七巨头。",
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "强",
+      "coreFact": "美联储宣布维持利率不变，美股三大指数小幅收涨，实现三连涨。",
       "marketInterpretation": "",
       "rumorNote": "",
-      "publishTime": "2026-10-28",
+      "publishTime": "2026-10-29",
       "sources": [
         {
-          "name": "财新",
-          "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5jVkVoVGp6bUhPb3hFOVQ3RUQxejhtaXg3eTY3YS14Vmh0MC05WWw3MFJUNU5EV1hrMFpBRFd1bGkwT05FaFdteFlaaWJ0WEJ2YWM1NWNMeVU2LWpCaldtdUpORVo?oc=5"
+          "name": "ThePaper.cn",
+          "time": "2026-10-29",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE52aVNtSTJQU1N0aEJOQk9WdlU0QjF5UWVQRDBydHd1LTBucDBTU09mcFdsRjJoS1owUV9Odmkzd09feHc1bUhxZ3FUbFRfTkdOSXpwOTFOdEJHU3BoazN5Ng?oc=5"
         }
       ]
     },
@@ -510,23 +510,23 @@
       "tracks": [
         "美股市场"
       ],
-      "targets": "美股整体",
+      "targets": "谷歌（GOOGL）",
       "eventTypes": [
-        "机构观点"
+        "公司公告"
       ],
-      "sentimentFactor": "流动性因子",
-      "impactDirection": "待观察",
-      "impactHorizon": "中期",
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "负面",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日摩根大通称若AI驱动盈利持续，美股可承受10年期美债收益率升至5.5%-6.0%。",
+      "coreFact": "谷歌三季度业绩不及预期，盘后股价大跌约10%。",
       "marketInterpretation": "",
       "rumorNote": "",
-      "publishTime": "2026-10-28",
+      "publishTime": "2026-10-29",
       "sources": [
         {
-          "name": "华尔街见闻",
+          "name": "财联社",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1sZ2ZVRl8tNy1EUGk4ZjBQbUxNNzZNYWx6Q1QzaVNMTjlhNHhhcXpLQlNSejZJc1I5cGZ2VDRuZFNUb1hDbVVSbzlFNW5PUFl0TktZ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1LNVp5NlZfM1dHV1lsWHFFUzdhMGo4bVI0QlpDN0taQWplcmc3WUYxeWZoMkhtUEVBOVRadk50TVI2Q1JsdEVyZQ?oc=5"
         }
       ]
     },
@@ -535,23 +535,23 @@
       "tracks": [
         "美股市场"
       ],
-      "targets": "标普500",
+      "targets": "甲骨文（ORCL）",
       "eventTypes": [
-        "机构观点"
+        "公司公告"
       ],
-      "sentimentFactor": "风险因子",
-      "impactDirection": "负面",
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日摩根士丹利称美股回调进入最后阶段，标普500或先回落至7100点。",
+      "coreFact": "甲骨文现金流指引提振AI云计算股，股价大涨超10%。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "证券之星",
+          "name": "凤凰网财经",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5CTERZMmhRamNra0ZxT2h1M2d6ZW5xSG5BbG8ydmtTOXRHZE12S0JyRTlnZk1MdGxVV28xb3dQWWJRaURzTUlpSU1OZ25RaHlPTFVsTW8zZG9SdUtUY0JjNg?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9UeGlNQW92U0FnSDdxMUlEZVF6bHNaSkJaN3ZVTWlkV2FmenVDcUdDMVYwYVdoRFNhN1ZrQnFhODNRMVBGMmtmLVN3YTROWjk2?oc=5"
         }
       ]
     },
@@ -560,23 +560,23 @@
       "tracks": [
         "美股市场"
       ],
-      "targets": "美股整体",
+      "targets": "行业整体",
       "eventTypes": [
         "政策监管"
       ],
-      "sentimentFactor": "流动性因子",
+      "sentimentFactor": "待验证",
       "impactDirection": "待观察",
-      "impactHorizon": "短期",
+      "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "10月28日美联储召开议息会议，美股三大指数集体收涨。",
+      "coreFact": "美联储主席沃什宣布将减少议息频次。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-10-28",
       "sources": [
         {
-          "name": "21财经",
+          "name": "财联社",
           "time": "2026-10-28",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZWdCNTdlOFBwaEZVaml0QTR1VDNtV1VnanBReUFKemp6X3I3bHVlZzVyUVUtWVIyX21ZR284SkZGOXBSN2pWcGxVUm1fRG54Q1U2V1hDOHBoalR6Q0luRnlVQ3hMYWJ1cU8wWkExZXpVOTQ3UUZOXzNmTEUxZExlTmNhNzFodi1sZnUwTWw1cw?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1LNVp5NlZfM1dHV1lsWHFFUzdhMGo4bVI0QlpDN0taQWplcmc3WUYxeWZoMkhtUEVBOVRadk50TVI2Q1JsdEVyZQ?oc=5"
         }
       ]
     }
@@ -584,39 +584,30 @@
   "rumors": [
     {
       "id": "rum-20261028-001",
-      "track": "恒生科技",
-      "content": "微博热搜讨论腾讯剧集《尚公主》热度表现，涉及腾讯内容生态话题。",
+      "track": "美股市场",
+      "content": "微博热议美联储主席宣布将减少议息频次",
       "heat": "高",
       "platform": "微博热搜",
       "time": "2026-10-28",
-      "url": "https://s.weibo.com/weibo?q=%E5%B0%9A%E5%85%AC%E4%B8%BB%E8%85%BE%E8%AE%AF%E7%83%AD%E5%BA%A6%E6%98%AF%E5%9C%A8%E5%9E%92%E9%95%BF%E5%9F%8E%E5%90%97"
+      "url": "https://s.weibo.com/weibo?q=%E7%BE%8E%E8%81%94%E5%82%A8%E4%B8%BB%E5%B8%AD%E5%AE%A3%E5%B8%83%E5%B0%86%E5%87%8F%E5%B0%91%E8%AE%AE%E6%81%AF%E9%A2%91%E6%AC%A1"
     },
     {
       "id": "rum-20261028-002",
-      "track": "半导体设备",
-      "content": "微博热搜讨论华为Mate90十大黑科技传闻，涉及国产芯片话题。",
+      "track": "美股市场",
+      "content": "微博热议谷歌三季度营收不及预期盘后暴跌",
       "heat": "中",
       "platform": "微博热搜",
       "time": "2026-10-28",
-      "url": "https://s.weibo.com/weibo?q=%E6%9B%9D%E5%8D%8E%E4%B8%BAMate90%E5%8D%81%E5%A4%A7%E9%BB%91%E7%A7%91%E6%8A%80"
+      "url": "https://s.weibo.com/weibo?q=%E8%B0%B7%E6%AD%8C%E4%B8%89%E5%AD%A3%E5%BA%A6%E8%90%A5%E6%94%B6%E4%B8%8D%E5%8F%8A%E9%A2%84%E6%9C%9F%E7%9B%98%E5%90%8E%E6%9A%B4%E8%B7%8C"
     },
     {
       "id": "rum-20261028-003",
-      "track": "半导体设备",
-      "content": "知乎热榜讨论极客湾旗舰手机芯片大横评视频，涉及芯片性能对比。",
-      "heat": "低",
-      "platform": "知乎热榜",
+      "track": "恒生科技",
+      "content": "微博热议腾讯招商大会剧集站内热度",
+      "heat": "中",
+      "platform": "微博热搜",
       "time": "2026-10-28",
-      "url": "https://www.zhihu.com/question/2098461659014681187"
-    },
-    {
-      "id": "rum-20261028-004",
-      "track": "存储芯片",
-      "content": "头条热榜讨论三星折叠屏手机广告切苹果画面，涉及三星终端营销话题。",
-      "heat": "高",
-      "platform": "头条热榜",
-      "time": "2026-10-28",
-      "url": "https://www.toutiao.com/trending/7701123819980914729"
+      "url": "https://s.weibo.com/weibo?q=%E8%85%BE%E8%AE%AF%E6%8B%9B%E5%95%86%E5%A4%A7%E4%BC%9A%E5%89%A7%E9%9B%86%E7%AB%99%E5%86%85%E7%83%AD%E5%BA%A6"
     }
   ]
 }
