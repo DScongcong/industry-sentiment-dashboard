@@ -1,67 +1,63 @@
 {
   "meta": {
-    "dataCutoff": "2026-11-11 15:45（中国标准时间）",
+    "dataCutoff": "2026-11-12 09:20（中国标准时间）",
     "timeWindow": "过去24小时",
-    "generatedAt": "2026-11-11T15:45:39.829491+08:00"
+    "generatedAt": "2026-11-12T09:20:14.178717+08:00"
   },
   "events": [
     {
-      "id": "evt-20261111-001",
+      "id": "evt-20261112-001",
       "tracks": [
         "半导体设备"
       ],
-      "targets": "爱利彼半导体设备（上海）股份有限公司（未上市）",
+      "targets": "阿斯麦控股（ASML）",
       "eventTypes": [
-        "公司公告"
+        "公司公告",
+        "行业数据"
+      ],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "中期",
+      "evidenceStrength": "强",
+      "coreFact": "阿斯麦公布强劲财报，称半导体设备供不应求，已有客户咨询2030年订单。",
+      "marketInterpretation": "媒体解读为设备端需求能见度延长至2030年。",
+      "rumorNote": "",
+      "publishTime": "2026-11-12",
+      "sources": [
+        {
+          "name": "财联社",
+          "time": "2026-11-12",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9iM1h2amVhMngzTnM3M05XbHlTbHd0U2pNTi1RWDZTQkZoY2ZnSG54eEtwMzB4OXFtbVFtdExBQjFiWm5mb2FYMw?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-002",
+      "tracks": [
+        "半导体设备"
+      ],
+      "targets": "行业整体（武汉造半导体设备）",
+      "eventTypes": [
+        "技术进展"
       ],
       "sentimentFactor": "待验证",
-      "impactDirection": "中性",
-      "impactHorizon": "中期",
+      "impactDirection": "正面",
+      "impactHorizon": "长期",
       "evidenceStrength": "中",
-      "coreFact": "爱利彼半导体设备（上海）股份有限公司办理IPO辅导备案，拟首次公开发行股票并上市，辅导机构为申万宏源。",
+      "coreFact": "湖北省经信厅披露，武汉造半导体设备实现全球首次350mm碳化硅激光剥离。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-11-11",
       "sources": [
         {
-          "name": "观点网",
+          "name": "湖北省经济和信息化厅",
           "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5qMUF1b0ZFdFhaajY5ZWtnY3ZlaDlMMXBNOHlEX2RvRTR1ei1XN2gwbEFkLVlMSFA1eUNnSzZjLXQ5dUgyLThpU3ZBWGVLTUJ2dDA3QVBSbUdtT0lFQkVZNUxB?oc=5"
-        },
-        {
-          "name": "新浪财经",
-          "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBURFVFdDlHZEhHbkIwOXZCMXFXVXczcmxQaXdzR0dKc0htWGZRU2pTVmdCa25TdHMyT2xDajBxTjdCeXlxZGFzaXo0WGZWRGpVaEQtX2prRmhBUHhlLTlYNV9PdFB3elVaZEV3UjZEaw?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9yVThqQ2NpcmwzSWJiekppenRvdmRkTGZzTlNDWXAyY3VxZmQySGVyU0V0ZnBPU1MzUWUtVEd3bV9UZzZiZFhfYWU4ZnJNWkVWY1BHU1ZTVHZBRUkzMWt6TDVVTzRHZ0pXdU5yX1hnRzd1dw?oc=5"
         }
       ]
     },
     {
-      "id": "evt-20261111-002",
-      "tracks": [
-        "半导体设备"
-      ],
-      "targets": "荣旗科技（301360）",
-      "eventTypes": [
-        "公司公告"
-      ],
-      "sentimentFactor": "待验证",
-      "impactDirection": "中性",
-      "impactHorizon": "中期",
-      "evidenceStrength": "中",
-      "coreFact": "荣旗科技公告拟以超募资金支付部分股权收购款，切入半导体上游精密零部件赛道。",
-      "marketInterpretation": "",
-      "rumorNote": "",
-      "publishTime": "2026-11-11",
-      "sources": [
-        {
-          "name": "东方财富",
-          "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBGTmR6WW9DTkZMOHhGS0F4YW1taTU2eUFTNlJLSWpCTDA4eFIwblItNkh6WkhwTzl2X2o3OG9XVlkxRThqSEkzSklKWFg3RzBVMzFWbGFSQ0h3b3gwdlRLRFZJbw?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20261111-003",
+      "id": "evt-20261112-003",
       "tracks": [
         "半导体设备"
       ],
@@ -69,62 +65,112 @@
       "eventTypes": [
         "机构观点"
       ],
-      "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "杰富瑞发布观点称半导体设备行情将持续至2028年，认为此前利空被过度放大。",
+      "coreFact": "杰富瑞称半导体设备火爆行情将持续至2028年，认为利空被过度放大。",
       "marketInterpretation": "机构认为设备景气周期长于市场预期。",
       "rumorNote": "",
-      "publishTime": "2026-11-10",
+      "publishTime": "2026-11-11",
       "sources": [
         {
           "name": "财联社",
-          "time": "2026-11-10",
+          "time": "2026-11-11",
           "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1tQ21fZG10RVlUM3A4d09ydEYzSFJIUHFVN2xVV2JOOGM3c3IwMzJOSFpUSnFXc3hSb3U1anQ4eGllQ2ZGUW1ONA?oc=5"
         }
       ]
     },
     {
-      "id": "evt-20261111-004",
+      "id": "evt-20261112-004",
       "tracks": [
         "半导体设备"
       ],
-      "targets": "行业整体",
+      "targets": "青岛半导体设备商（中车系背景）",
       "eventTypes": [
-        "行业数据"
+        "公司公告"
       ],
-      "sentimentFactor": "风险因子",
+      "sentimentFactor": "流动性因子",
       "impactDirection": "待观察",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "朝鲜日报中文版报道，受美国制裁影响，全球半导体设备在中国市场销售额占比出现骤降。",
+      "coreFact": "青岛一家中车系背景半导体设备商冲刺科创板，拟募资20亿元。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-11-11",
       "sources": [
         {
-          "name": "朝鮮日報中文版",
+          "name": "凤凰网财经",
           "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPN2h3RndNVVZtbC1EemZfeDRYTGIwX2pUOUcycE9rN0dYMVpjZlFqRnV0Yk9aY3BZZTFmN05aeG9nWjBmR0ZNSGpZellNRFk3aDA2R0t0ZndzRVhjdGFGNjRHcFFjN0xjVHFtbkx0VXVHNWp3OHFxLWpuVnVzOXduSjNWMklMaV9TZWwzSjJINUwyQQ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBiZTZ3MldJQnVCYlFfdWdKdERULVdweFB5ZFkxcmV1ajJoWWUwejJrQmhGMm15a1JSN19UTmQ4dlEwNkIwQzRhNEE0TzAyZ1Ez?oc=5"
         }
       ]
     },
     {
-      "id": "evt-20261111-005",
+      "id": "evt-20261112-005",
+      "tracks": [
+        "CPO"
+      ],
+      "targets": "中际旭创（300308）",
+      "eventTypes": [
+        "行业数据"
+      ],
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "中",
+      "coreFact": "CPO概念再度走强，中际旭创涨超15%，市场关注行情持续性。",
+      "marketInterpretation": "媒体讨论是否摆脱“一日游”行情。",
+      "rumorNote": "",
+      "publishTime": "2026-11-11",
+      "sources": [
+        {
+          "name": "第一财经",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE16d2NBLXlRQzNmQmN3bmFrWjBVTldJVHVsMFZwS1A0U29Xc1JobXhxRzh6Z1dqSGVsd2EtLXBSbDhuZFVCSFBNQl8xYndZWWV6OVJjTw?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-006",
       "tracks": [
         "CPO"
       ],
       "targets": "行业整体",
       "eventTypes": [
-        "技术进展"
+        "机构观点"
+      ],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "中期",
+      "evidenceStrength": "中",
+      "coreFact": "伯恩斯坦测算英伟达Rubin Ultra单Pod光学价值量提升约5倍，指向CPO需求。",
+      "marketInterpretation": "机构认为CPO单机价值量显著抬升。",
+      "rumorNote": "",
+      "publishTime": "2026-11-11",
+      "sources": [
+        {
+          "name": "华尔街见闻",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBtOUN2azJjeVdZcWhFbURxUDFJcTJOMHlRRmwwTmFjRTZxcldNTXl0Z0ZJMUpqWmItRDZ1b0x4MDgzZXBpNnU3YVlPTnpQVHduTEpF?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-007",
+      "tracks": [
+        "CPO"
+      ],
+      "targets": "行业整体",
+      "eventTypes": [
+        "供应链变动"
       ],
       "sentimentFactor": "待验证",
       "impactDirection": "待观察",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "财联社报道，黄仁勋相关表态涉及CPO、基板与半导体封装，“达链”扩产潮或启动。",
-      "marketInterpretation": "市场将其解读为CPO产业链扩产信号。",
+      "coreFact": "媒体报道黄仁勋相关表态涉及CPO、基板与半导体封装，“达链”扩产潮或启动。",
+      "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-11-11",
       "sources": [
@@ -136,320 +182,279 @@
       ]
     },
     {
-      "id": "evt-20261111-006",
+      "id": "evt-20261112-008",
       "tracks": [
         "CPO"
       ],
-      "targets": "新易盛、中际旭创、天孚通信、剑桥科技",
+      "targets": "行业整体",
+      "eventTypes": [
+        "行业数据"
+      ],
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "中",
+      "coreFact": "创业板指收涨超3%，CPO、PCB等算力硬件股集体爆发。",
+      "marketInterpretation": "",
+      "rumorNote": "",
+      "publishTime": "2026-11-11",
+      "sources": [
+        {
+          "name": "财联社",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBkQzlIX2pxZGlCaXZIV25IbzVMQTN2VDdPbGRVT0F4VkRrTnN6T2FGZ0JVb0dSQUgzWmtzNGRybHo4Rnh5bWlISQ?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-009",
+      "tracks": [
+        "国产算力"
+      ],
+      "targets": "阿里巴巴（9988.HK）平头哥",
+      "eventTypes": [
+        "公司公告"
+      ],
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "正面",
+      "impactHorizon": "中期",
+      "evidenceStrength": "中",
+      "coreFact": "阿里巴巴申请平头哥赴港独立上市，媒体报道国产算力芯片正加速放量。",
+      "marketInterpretation": "被视为国产AI芯片资本化与规模化节点。",
+      "rumorNote": "",
+      "publishTime": "2026-11-11",
+      "sources": [
+        {
+          "name": "东方财富",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5kVVNCR0U0U2tVdVZ4Y2dHLW5reWtqZmpILTNWQTlqR1BVQ0pNTVFwRnBmMmhjQkNJaEx2alV6aDNGVWNudmpaMnZhcUZDTzY2ck0tWVdyXzRZazUtcEY4YmM4ekNNdw?oc=5"
+        },
+        {
+          "name": "凤凰网财经",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5MenhfOEJ3d1B3QkpWUlgtSnE3cEY2TlBMOWZzOEZJZF9kaWNGVzJyLVFGT2dUWS1TcHZGWW5ScFV1RlVyZ1FjMVZLTGdodTlP?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-010",
+      "tracks": [
+        "国产算力"
+      ],
+      "targets": "超聚变",
+      "eventTypes": [
+        "公司公告"
+      ],
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "待观察",
+      "impactHorizon": "中期",
+      "evidenceStrength": "中",
+      "coreFact": "超聚变将上会，媒体称其押注智能体时代算力，为国产算力成长样本。",
+      "marketInterpretation": "",
+      "rumorNote": "",
+      "publishTime": "2026-11-11",
+      "sources": [
+        {
+          "name": "凤凰网财经",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9kQjIxTThrRkZ1UlloRDJoZWpnSnJ1MXhGTDdzMmtpUDJUV2ZvSUpPQTRzaHZmYzhsbUVHZDhjR0xNVWcySlBaakRPd3QwZlRM?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-011",
+      "tracks": [
+        "国产算力"
+      ],
+      "targets": "行业整体",
+      "eventTypes": [
+        "机构观点"
+      ],
+      "sentimentFactor": "盈利因子",
+      "impactDirection": "正面",
+      "impactHorizon": "中期",
+      "evidenceStrength": "中",
+      "coreFact": "中信证券称国产算力需求边际向上，建议聚焦IDC、连接器、交换机等核心环节。",
+      "marketInterpretation": "",
+      "rumorNote": "",
+      "publishTime": "2026-11-12",
+      "sources": [
+        {
+          "name": "富途牛牛",
+          "time": "2026-11-12",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWjlLYWZIRjRqa1hNM0tXV1RfNk5PNktEWWFrMFlvZGwxbnNQdlpWc083aXhsMW9CcTNXSk8zazRGb3lXOWNjMGJwbFp1RUFvUW9NYnFSVXp3T1JfcFdLNWtSX1BQY2tuWTRicXdvRGFOUzdWSzNjOWZRbzRoRTJBRHBGejRVbDVYV3U3S2NQZTlOTXVNM1F0OHA5dnJ5c2R2TGVaVFJfRlpjbDhhUC1yclktcU1QX2c?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-012",
+      "tracks": [
+        "国产算力"
+      ],
+      "targets": "行业整体",
       "eventTypes": [
         "技术进展"
       ],
       "sentimentFactor": "待验证",
+      "impactDirection": "正面",
+      "impactHorizon": "长期",
+      "evidenceStrength": "中",
+      "coreFact": "首个面向国产算力的多目标优化平台AscendMOEA正式开源发布。",
+      "marketInterpretation": "",
+      "rumorNote": "",
+      "publishTime": "2026-11-11",
+      "sources": [
+        {
+          "name": "西北农林科技大学",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE96RzdfV2FFR0JRMXY3VDJWN1JJanlfV0dUQXZ1Tmxyblc0QzdFbFp0MzVSRU5pX1hlaEE3YmZrQVExNmtWWG14Rm1aS3J4RFlIRFlxMWV3ZnZ6dFFRaTZucEE2Wi1LZzRZMXZEdXd1RXVTUmpMUzBj?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-013",
+      "tracks": [
+        "存储芯片"
+      ],
+      "targets": "行业整体",
+      "eventTypes": [
+        "行业数据"
+      ],
+      "sentimentFactor": "盈利因子",
       "impactDirection": "待观察",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "微软就光通信相关事项发声后，A股CPO概念集体走强，新易盛、中际旭创涨超13%，天孚通信涨超9%。",
-      "marketInterpretation": "媒体称微软表态提振光模块需求预期。",
+      "coreFact": "有代理商称消费级存储同步上涨，但表示“价格可谈”，市场酝酿新一轮涨价。",
+      "marketInterpretation": "媒体对涨价持续性存在分歧。",
+      "rumorNote": "",
+      "publishTime": "2026-11-11",
+      "sources": [
+        {
+          "name": "海报新闻",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE4yMlBJQ2hEdkY4SFRoV0QzUXlrT2VGT0UxR2ZKU1FEOGlBOGV2SmF2ZFB2TjZkRkVRVjYyWGstY2NMTHAzejVjSXA4RGswMmc?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-014",
+      "tracks": [
+        "存储芯片"
+      ],
+      "targets": "行业整体",
+      "eventTypes": [
+        "机构观点"
+      ],
+      "sentimentFactor": "风险因子",
+      "impactDirection": "负面",
+      "impactHorizon": "中期",
+      "evidenceStrength": "中",
+      "coreFact": "摩根士丹利警告旧存储价格正在见顶，2028年供需或转向宽松。",
+      "marketInterpretation": "机构提示旧制程存储价格风险。",
       "rumorNote": "",
       "publishTime": "2026-11-11",
       "sources": [
         {
           "name": "华尔街见闻",
           "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB5WEd0RTBUbHlZNkhyX2pUQTI5anZKd29QM2ZyNWR3NHNaRjdhbS1nYmcyYkRhcmVFVVdqQ0RwdUxVaFZMVllRU0xRdE1qVmRtVm40?oc=5"
-        },
-        {
-          "name": "金融界",
-          "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1qblExUnV5R0VDR2tXQS1YN2lkSnBWMnAtSk1lTjZaRElwSEdlaDFqRHZFT3FkSjNQSU02cEt3OGN4QzA3NmlmbWFXY3FBSjdvNEFUY2dma0ZNQWpuUTc5Nl9rM2hmYlBsbWh6eVFjTzVVUQ?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5Bemk4V082SHowZzNuX1Eyc2kzNVEtZ2NMa1AxZ1Z3UFJrN0RlOGhCXzB6bHcyUjU5eGFtdy1ERmJnX3FQazdLaXBPLUJ1ZGMyb0FB?oc=5"
         }
       ]
     },
     {
-      "id": "evt-20261111-007",
+      "id": "evt-20261112-015",
       "tracks": [
-        "国产算力"
+        "存储芯片"
       ],
-      "targets": "阿里巴巴（BABA/9988.HK）平头哥",
+      "targets": "西安奕材（688783.SH）",
       "eventTypes": [
         "公司公告"
       ],
       "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
+      "impactDirection": "中性",
       "impactHorizon": "中期",
       "evidenceStrength": "中",
-      "coreFact": "阿里巴巴官宣分拆平头哥并递表港交所，申请独立上市。",
-      "marketInterpretation": "媒体称国产AI芯片进入资本化与规模化阶段。",
-      "rumorNote": "",
-      "publishTime": "2026-11-11",
-      "sources": [
-        {
-          "name": "凤凰网财经",
-          "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5MenhfOEJ3d1B3QkpWUlgtSnE3cEY2TlBMOWZzOEZJZF9kaWNGVzJyLVFGT2dUWS1TcHZGWW5ScFV1RlVyZ1FjMVZLTGdodTlP?oc=5"
-        },
-        {
-          "name": "新浪网",
-          "time": "2026-11-10",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5FWnRYdmdfaHh3X3ZVcFZTd3hXODhtVjNwdlRUS3lNUlFPSkpRekJQX0FBcVZ5RGhsdTNnOXR1Qm9tbmdVZW1vQmJCRUd2cW5hZ0xyQVIyMUMyWTEtRlNnSTRzYnVuYWUxcWxsWXpuUTNFUQ?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20261111-008",
-      "tracks": [
-        "国产算力"
-      ],
-      "targets": "燧原科技（未上市）",
-      "eventTypes": [
-        "行业数据"
-      ],
-      "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
-      "impactHorizon": "中期",
-      "evidenceStrength": "中",
-      "coreFact": "财联社报道算力板块反弹，燧原科技市值一度重返2000亿元，国产芯片进入规模化部署阶段。",
-      "marketInterpretation": "",
-      "rumorNote": "",
-      "publishTime": "2026-11-10",
-      "sources": [
-        {
-          "name": "财联社",
-          "time": "2026-11-10",
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBYYkN5S1Z4Z05UbjZsNlJGNkhmTHhfZjhoXzFfUVhJdl8tZnEwaGZoZEFoS2JKV2wxcXFkc21oNmNoMTNNZkpKcQ?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20261111-009",
-      "tracks": [
-        "国产算力"
-      ],
-      "targets": "行业整体",
-      "eventTypes": [
-        "政策监管"
-      ],
-      "sentimentFactor": "政策因子",
-      "impactDirection": "待观察",
-      "impactHorizon": "中期",
-      "evidenceStrength": "中",
-      "coreFact": "手机新浪网报道，国产算力领域出现重要部署。",
+      "coreFact": "西安奕材称产品当前主要布局用于存储芯片和逻辑芯片制造的抛光片和外延片。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-11-11",
       "sources": [
         {
-          "name": "手机新浪网",
+          "name": "TradingView",
           "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8yUTJCSEc4bzZYSlRtakZhTk8yQ1NlV0pRdUx5Y3JRUjFOcmtMRHhyc2pyWEhKdFJ4UXlHXzRDaFBsazhmSDVsdTdhLW5zdHhoVmkyVTVaMVB1Tm1UX1pLNXhUUDBRTU5UbTAxaXRFeG9SR1VhVGdTNjZiaG56SUU?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE96d1l2U01OWE15R3F3YURqdlhJdkRpdnlnbTc2Zk9zaWJ3dVl3N3N6cG01UmxjZFJmSXZFY3NNVkRjb3hpR09oZkRHTjlwNHhTTnJDRWNNRVdzbEEwbmg0aGR4OGFlMXluM0E?oc=5"
         }
       ]
     },
     {
-      "id": "evt-20261111-010",
+      "id": "evt-20261112-016",
       "tracks": [
         "存储芯片"
       ],
-      "targets": "三星电子（005930.KS）",
+      "targets": "影石创新（688775.SH）",
       "eventTypes": [
-        "行业数据"
-      ],
-      "sentimentFactor": "盈利因子",
-      "impactDirection": "待观察",
-      "impactHorizon": "中期",
-      "evidenceStrength": "中",
-      "coreFact": "搜狐报道，三星存储芯片环比大涨20%，且长协锁定产能，供需紧张格局延续。",
-      "marketInterpretation": "",
-      "rumorNote": "",
-      "publishTime": "2026-11-11",
-      "sources": [
-        {
-          "name": "Sohu",
-          "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPTjNQbUZFR05tN3NGRVA3Nk8xMnJVdHUtY3NJTF9oUWZza3FWdU9uVjNWdldEbFNXbjN0eDNxNlJrSmo2dEx2QWd0akRPYWd6VDhUZFBWaElPWEp2Z3YwNm5IQXdfNFhaQmIyaXcxaHZDYTFCTnlqVDk1aFNlX29OcGZtR3lQOGRyWWpVbg?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20261111-011",
-      "tracks": [
-        "存储芯片"
-      ],
-      "targets": "普冉股份（688766）、佰维存储（688525）",
-      "eventTypes": [
-        "行业数据"
+        "公司公告"
       ],
       "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
+      "impactDirection": "中性",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "A股存储芯片股集体拉升，普冉股份涨超8%，佰维存储涨超6%，市场关注存储酝酿新一轮涨价。",
+      "coreFact": "影石创新回应存储芯片备货质疑，称核心原材料流动性良好。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-11-11",
       "sources": [
         {
-          "name": "金融界",
+          "name": "观点网",
           "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1ramFxbE45UWpiNVY0enBlMUdsZktIZVdpN3l6d1FLZUtMZTVBUFpsbEFyNkVyYWNxVWxuazBVdmpuelhyYmZOd3ZUMHBHTnh3cThSbDhMVHNUaDVfY216Nk9RN3pfSmxiRmtsaE9fcTBTdw?oc=5"
-        },
-        {
-          "name": "Sohu",
-          "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZmxsaVZvWEZBSE84UnJoMnpxODRYZ29sUDBFX2p4RHBjVFVfVjktZkQxWWpfSXlHMVJmVmkxbjZNVGxJOHp0ZVFucDA5dTd4MHVGS2hBclhCOEJDM0stU2I3MHVaYklHN2REZ3BUeWd1aTZuQ2JvZncwbWFwS0E3ZE90djhpbF9YS01hOA?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5tRW5Rc0JxcGNNTXBLSjdZTEEzMzRzX2txUFh5YkZwaXR5M2pVczFpdDZ0TDdaMVdWdlU5Wm9TZGN5bFZ6QjM1cVZUbkZOenJER2hQM1NoWUlCblpaWlIzWnFB?oc=5"
         }
       ]
     },
     {
-      "id": "evt-20261111-012",
-      "tracks": [
-        "存储芯片"
-      ],
-      "targets": "普冉股份（688766）",
-      "eventTypes": [
-        "公司公告"
-      ],
-      "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
-      "impactHorizon": "中期",
-      "evidenceStrength": "中",
-      "coreFact": "普冉股份在前三季度净利涨逾25倍后，筹划发行H股。",
-      "marketInterpretation": "",
-      "rumorNote": "",
-      "publishTime": "2026-11-10",
-      "sources": [
-        {
-          "name": "东方财富",
-          "time": "2026-11-10",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE14TG1JYlVYWlAwbUlGTlBPQkthWjBvLVdyY0Z3NkVncENOSmlnWWh2OWx6LWNBTEVnS3RIWENwTGF0Z3BCSGdYMTB0ZnozcG1lbGMySG5TVUQ2LVc2eF9YMGR1RQ?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20261111-013",
-      "tracks": [
-        "存储芯片"
-      ],
-      "targets": "消费电子产业链",
-      "eventTypes": [
-        "行业数据"
-      ],
-      "sentimentFactor": "风险因子",
-      "impactDirection": "待观察",
-      "impactHorizon": "中期",
-      "evidenceStrength": "中",
-      "coreFact": "证券之星报道，存储涨价抑制消费市场并拖累利润，消费电子产业链正打造新增长极。",
-      "marketInterpretation": "",
-      "rumorNote": "",
-      "publishTime": "2026-11-11",
-      "sources": [
-        {
-          "name": "证券之星",
-          "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9oeDUxcHRfZFg0SU9IZHVmU3pXUHQzRko5cHVKdXdSN2xaUy1WZDFaa0owbW9SMjhjYW1wVFBEUmNtQlBEdUNCb2FLMmNzMDhEWDVGN2dIaFJZRGpZUTB3Ug?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20261111-014",
+      "id": "evt-20261112-017",
       "tracks": [
         "恒生科技"
       ],
-      "targets": "恒生科技指数（HSTECH）",
+      "targets": "恒生科技指数",
       "eventTypes": [
         "行业数据"
       ],
       "sentimentFactor": "流动性因子",
-      "impactDirection": "待观察",
+      "impactDirection": "负面",
       "impactHorizon": "短期",
       "evidenceStrength": "强",
-      "coreFact": "港股午间收盘，恒生指数跌0.83%，恒生科技指数跌1.36%，中医药板块涨幅居前。",
-      "marketInterpretation": "",
+      "coreFact": "11月11日港股收盘，恒指跌0.98%，恒生科技指数跌1.41%。",
+      "marketInterpretation": "光通信板块涨幅居前，科网股走弱。",
       "rumorNote": "",
       "publishTime": "2026-11-11",
       "sources": [
         {
           "name": "东方财富",
           "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5SQm9rYzBOT0dSUVcwOWUxRkN0ZVZlakRDbHBTdG41Y25aZGs1UU1QY3dTeW1QR1EzQmtudjVSR2pnbmRLV3FTcGxWdy1EOHlyOE9vUms3VWRaYVcxN0JQUUZkZDlwUQ?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20261111-015",
-      "tracks": [
-        "恒生科技",
-        "CPO"
-      ],
-      "targets": "剑桥科技（603083）、中际旭创（300308）",
-      "eventTypes": [
-        "行业数据"
-      ],
-      "sentimentFactor": "待验证",
-      "impactDirection": "待观察",
-      "impactHorizon": "短期",
-      "evidenceStrength": "中",
-      "coreFact": "港股光通信股逆势走高，剑桥科技大涨超16%、中际旭创涨近8%，恒科指同期跌超1%。",
-      "marketInterpretation": "",
-      "rumorNote": "",
-      "publishTime": "2026-11-11",
-      "sources": [
-        {
-          "name": "Sohu",
-          "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOUk5UVWRFa2hiLVphSHNVbGt0WHBlMGdoZUNKMnlhQUNRMTV6OEo5RUhaWGRVU3p2bkxLc2xncnRXQjR5aUJ5eFF1bm9uRTJBX3hxdTBPUlI1TjFYWm5mX1V1dTE2NUtyb05JUEd2SW9kWjI1Z245c2tQekdwWUJneXhCaVNyNWFOeFhhQw?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1XUHVvYWRnaDhJTjlTcm12cFNWeU5hQ05ZLU5NRmlDbXVxQ2U0NFRvVTFtazVLY1Z6ZTRFcmQyaTZtU3M3RTdQUENZYnBYMFY4V0JZUmFvYml4emM5WUtlUFo4NzF2UQ?oc=5"
         },
         {
-          "name": "凤凰网财经",
+          "name": "21财经",
           "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9icXFrQmtFWHRkbnp2LTlMM08xVmVGV3pSR0dzdzJHVHdFdWYtcVpHaXhhd0tuY2d1Z1JBU2FoMlh5Z211cFpCbEx5a08tMzg3?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUF8xMThGT05zTFN1ZFQ3Vk12UjZHcllfZkx4R2dXNndueTk0OXFmQ296TzdzUi1Ed3FVNDNFMVpJN1hPWWZ1eGdTN0M4X1BxSzNaZ0x6cmk1Q2o5X2NMQ1FuLUl2NTJSdUl2THhMcGNESGlucTZDOFV4aW9wQ3I1TE9selBORmhrOVdxTmIwYw?oc=5"
         }
       ]
     },
     {
-      "id": "evt-20261111-016",
+      "id": "evt-20261112-018",
       "tracks": [
-        "美股市场"
+        "恒生科技"
       ],
-      "targets": "美股三大指数、英伟达（NVDA）",
+      "targets": "恒生科技指数",
       "eventTypes": [
-        "行业数据"
-      ],
-      "sentimentFactor": "风险因子",
-      "impactDirection": "待观察",
-      "impactHorizon": "短期",
-      "evidenceStrength": "强",
-      "coreFact": "美股三大指数齐收跌，英伟达再跌5.53%，美国10月通胀超预期推升美联储加息预期，中概股普跌。",
-      "marketInterpretation": "媒体将下跌归因于通胀超预期与加息预期升温。",
-      "rumorNote": "",
-      "publishTime": "2026-11-10",
-      "sources": [
-        {
-          "name": "第一财经",
-          "time": "2026-11-10",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1HUUlBVko3Uzc4Sk1vSnYxUV9PeU1RWkwzLVk2QVR3bXNIaF9SMlU3cDFjZmZJRjVVVUUtaE1lT0E2NXowMDl1RDUtRUlZSGszUFFR?oc=5"
-        },
-        {
-          "name": "中国基金报",
-          "time": "2026-11-10",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1UWWYxazJWbnhabjg0dnVuX21DMUVPRkYwbDlvb2VZb20tYkRFVHRpZlg3N3lpRmg2SFhHSXJqaXRZNG1mRUlwc2hTZEhnS0QzaWdIUF9TaFdhR0JmZWttdlJGNHItSjBRWktXUUd4b21abzdaYVdBNUx3?oc=5"
-        }
-      ]
-    },
-    {
-      "id": "evt-20261111-017",
-      "tracks": [
-        "美股市场"
-      ],
-      "targets": "美股三大指数、费城半导体指数",
-      "eventTypes": [
-        "行业数据"
+        "机构观点"
       ],
       "sentimentFactor": "流动性因子",
       "impactDirection": "待观察",
       "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "财联社报道，美股三大指数全线走高，纳指涨逾2%，美伊局势缓和提振风险偏好。",
+      "coreFact": "财联社称港股缩量、场内交投情绪转淡，科技板块内部分歧轮动。",
       "marketInterpretation": "",
       "rumorNote": "",
       "publishTime": "2026-11-11",
@@ -457,12 +462,68 @@
         {
           "name": "财联社",
           "time": "2026-11-11",
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5UZVJsQ0x1ZGNuZmVLUWNDd00wdjVIcUE0VVFRcFdzUEZBc0owOXFoZWplazRUYS02UHZkLVBvU0JIN2pIZk1ZaA?oc=5"
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBIOEdwOUZRbExZQzlFNHdnaWo5cXhQTzFUdEl2ejRWa1pvNWhhMHFuTGlEVGQ4RzdIckNUNUVmZnh4VnNKb0o3cw?oc=5"
         }
       ]
     },
     {
-      "id": "evt-20261111-018",
+      "id": "evt-20261112-019",
+      "tracks": [
+        "恒生科技"
+      ],
+      "targets": "恒生科技ETF嘉实（159741）",
+      "eventTypes": [
+        "公司公告"
+      ],
+      "sentimentFactor": "待验证",
+      "impactDirection": "中性",
+      "impactHorizon": "短期",
+      "evidenceStrength": "中",
+      "coreFact": "嘉实基金发布恒生科技ETF嘉实（159741）高级管理人员变更公告。",
+      "marketInterpretation": "",
+      "rumorNote": "",
+      "publishTime": "2026-11-11",
+      "sources": [
+        {
+          "name": "中财网",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9BdG5ObHFDdFRwZlJobGVQaGxEZDhCRlhIMlhlSkFrV0FsWXdHb1d1Z2JBU0VUcHpBWUhQRTJIbGx1cGEyTGFzai0xQmQ5al81em5wVTVR?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-020",
+      "tracks": [
+        "美股市场",
+        "存储芯片"
+      ],
+      "targets": "费城半导体指数",
+      "eventTypes": [
+        "行业数据"
+      ],
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "正面",
+      "impactHorizon": "短期",
+      "evidenceStrength": "强",
+      "coreFact": "美股收涨，纳指与标普500均涨超1%，费城半导体指数涨5.66%。",
+      "marketInterpretation": "AI交易重燃带动半导体板块反弹。",
+      "rumorNote": "",
+      "publishTime": "2026-11-11",
+      "sources": [
+        {
+          "name": "东方财富",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9TYmxlY0xjbmxhODVBdHJvaVdIb1NqbTRtVDlHZThVQ2RwN2YxSGd0c3lVeUhEM29zOUxOQkR0S1JncE9MTk1Ed0xucjdqYW1FTEd0WW52UDcxQjhaMUdpNQ?oc=5"
+        },
+        {
+          "name": "ThePaper.cn",
+          "time": "2026-11-12",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4teWhwOUpFemVTUUV2cWlFc3lTakpEb0F2QU43VVZQcFpTbFhoVXdvZTZyZ1g4dUF2cmI1S2NQNjNuYzV2SXdOd3U1TTZEcVcwM0hTekJBWlNSTzlZeFlaYQ?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-021",
       "tracks": [
         "美股市场"
       ],
@@ -472,39 +533,107 @@
       ],
       "sentimentFactor": "风险因子",
       "impactDirection": "待观察",
-      "impactHorizon": "中期",
+      "impactHorizon": "短期",
       "evidenceStrength": "中",
-      "coreFact": "财新报道，富达称美股AI估值修正传导至亚太市场，高杠杆资金流动引发震荡。",
+      "coreFact": "财联社称美股四大指标信号分化，技术面仍未解除警报。",
       "marketInterpretation": "",
       "rumorNote": "",
-      "publishTime": "2026-11-10",
+      "publishTime": "2026-11-11",
       "sources": [
         {
-          "name": "财新",
-          "time": "2026-11-10",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA1M0lZWVY4VXhxVGtlNVk3bXBQeVVaZHU1aWc3VklYTmgzYldtc1FqQk1jSTItVWw3UlpDMlNGcjRNVGRpbE5vQUJTdkRiRXRrTUdMYlpFc0g4SzhCZjlzekl3?oc=5"
+          "name": "财联社",
+          "time": "2026-11-11",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFAtcUhGQmplcjlBQ3NkV182REQtNWFLU3ZaTkFISmJxaXhBV0hRaFBGWFlRQUhyTTRTUmFRTElXcklUMm1iN0tUSg?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-022",
+      "tracks": [
+        "美股市场"
+      ],
+      "targets": "Anthropic",
+      "eventTypes": [
+        "公司公告"
+      ],
+      "sentimentFactor": "流动性因子",
+      "impactDirection": "待观察",
+      "impactHorizon": "中期",
+      "evidenceStrength": "中",
+      "coreFact": "财联社报道，Anthropic据悉拟于下周冲刺IPO。",
+      "marketInterpretation": "",
+      "rumorNote": "该事项为媒体“据悉”报道，尚未见公司正式公告。",
+      "publishTime": "2026-11-12",
+      "sources": [
+        {
+          "name": "财联社",
+          "time": "2026-11-12",
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1QckcxLVUxRWlLZWRZbmlOR1JGVl9nT0FLZVhyNFBkTDB2LUtqQlkwVzJaTlRmNkFDOVQ3WkdsNTdmMGFIM0JRNA?oc=5"
+        }
+      ]
+    },
+    {
+      "id": "evt-20261112-023",
+      "tracks": [
+        "美股市场"
+      ],
+      "targets": "行业整体",
+      "eventTypes": [
+        "机构观点"
+      ],
+      "sentimentFactor": "风险因子",
+      "impactDirection": "待观察",
+      "impactHorizon": "短期",
+      "evidenceStrength": "中",
+      "coreFact": "李开复表示美股AI板块股价可能腰斩但不是泡沫。",
+      "marketInterpretation": "",
+      "rumorNote": "",
+      "publishTime": "2026-11-12",
+      "sources": [
+        {
+          "name": "21财经",
+          "time": "2026-11-12",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORFczem5DcnZ5dUgxZkV1eWFnbnItdXdTMmpWMDRScWE5LXdFZzluQXpCSHhmNU1fZWMxdnRaZWVJT2tXUXFsNUtLd0RfbngzcWVvbTdkZ3lSdlRiakdoa2pBMzFHYmdKeWJFRmhDbXFPT05oY2kxLUN2RDZ0WHR0b2F1b2xTdjNfRHBtdTFkUQ?oc=5"
         }
       ]
     }
   ],
   "rumors": [
     {
-      "id": "rum-20261111-001",
+      "id": "rum-20261112-001",
       "track": "国产算力",
-      "content": "知乎热榜讨论谷歌开放Gemini 4 Carbon模型，涉及AI模型能力与算力需求话题",
-      "heat": "低",
-      "platform": "知乎热榜",
-      "time": "2026-11-11",
-      "url": "https://www.zhihu.com/question/2103666307413680604"
+      "content": "热榜话题称Anthropic披露AI仅用3天适配AMD芯片",
+      "heat": "高",
+      "platform": "头条热榜",
+      "time": "2026-11-12",
+      "url": "https://www.toutiao.com/trending/7706948038756929087"
     },
     {
-      "id": "rum-20261111-002",
+      "id": "rum-20261112-002",
       "track": "美股市场",
-      "content": "Moomoo社区用户发帖称市场蓄势待发、准备大拉升，并喊出All in口号",
+      "content": "热榜讨论美联储释放加息信号但股市未明显承压",
+      "heat": "中",
+      "platform": "头条热榜",
+      "time": "2026-11-12",
+      "url": "https://www.toutiao.com/trending/7707074236933738020"
+    },
+    {
+      "id": "rum-20261112-003",
+      "track": "存储芯片",
+      "content": "热榜转述大摩警告旧存储价格正在见顶",
       "heat": "低",
-      "platform": "Moomoo",
-      "time": "2026-11-11",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMFFiOXJGbTAtcS1jZEJkSzJyV3NuaTFneGlYdzNvOHNLalZSVkdOdFR0VUdJWWVDTXdvdW9NTmdFMTJVU1hrYWNHRk9zZGRLcEVxSU16a2NwUTEzNGFNNDVNYVRPOEVEMDVrZGdqQmdEYzd1QWNYNXRyZjVFOGQyVmdMZGpwZjZhaUYwTkJfSmhjVTNwVzlpVUdoVHYydU9oWmh0dTJGVjluSUhDN0JnTA?oc=5"
+      "platform": "头条热榜",
+      "time": "2026-11-12",
+      "url": "https://www.toutiao.com/trending/7706946669459279402"
+    },
+    {
+      "id": "rum-20261112-004",
+      "track": "国产算力",
+      "content": "热榜讨论东方新能押注算力是新格局还是老套路",
+      "heat": "低",
+      "platform": "头条热榜",
+      "time": "2026-11-12",
+      "url": "https://www.toutiao.com/trending/7706830490149326399"
     }
   ]
 }
